@@ -17,33 +17,82 @@
     }
 
     header { margin-bottom: 18px; }
-    h1 {
-      font-size: 1.5rem;
-      margin: 8px 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .museum { font-weight: 600; margin-bottom: 10px; font-size: 1rem; }
-    .meta { color: #555; font-size: 0.9rem; margin-bottom: 12px; }
 
     /* 작품번호 원형 */
     .label-number {
       background: #6B3F2A;   /* 포스터 갈색 */
-      color: #FDF6EC;        /* 아이보리 숫자 */
+      color: #FDF6EC;        /* 아이보리 */
       width: 28px; height: 28px;
       border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
       font-size: 0.85rem;
       font-weight: bold;
-      flex-shrink: 0;
+      position: absolute;
+      left: 0; top: 0;
     }
 
-    h2 { margin: 14px 0 6px; font-size: 1.05rem; }
+    .museum {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      position: relative;
+      padding-left: 38px; /* 번호만큼 들여쓰기 */
+    }
+
+    .slogan {
+      color: #6B3F2A;  /* 포스터 갈색 */
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: 'Noto Serif KR', serif;
+      text-decoration: underline; /* 밑줄 */
+      display: block;
+    }
+
+    .slogan-en {
+      color: #444;
+      font-style: italic;
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 16px 0 14px;
+      color: #222; /* 검은색 */
+      text-align: left;
+    }
+
+    .meta {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    /* 작품 설명 위 구분선 */
+    .divider {
+      border-bottom: 2px solid #6B3F2A;
+      margin: 20px 0 12px;
+    }
+
+    h2 {
+      margin: 14px 0 6px;
+      font-size: 1.05rem;
+      border-left: 4px solid #6B3F2A;
+      padding-left: 6px;
+      color: #222;
+    }
+
     .desc { white-space: pre-wrap; margin: 0; }
-    .note { font-size: 0.85rem; color:#555; margin: 4px 0 0; }
+
+    /* 각주 깔끔 정렬 */
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin: 6px 0 0;
+      padding-left: 1.4em;    /* 본문 들여쓰기 */
+      text-indent: -1em;      /* 별표만 내어쓰기 */
+      line-height: 1.5;
+    }
 
     section { margin-bottom: 14px; }
     footer { margin-top: 24px; font-size: 0.8rem; color: #777; text-align: center; }
@@ -59,12 +108,11 @@
 <body>
   <header>
     <div class="museum">
-      알도 마누치오가 활동한 15세기 이탈리아의 지도가 수록된 지리서<br>
-      <i>Geography book with a map of 15th-century Italy in the age of Aldo Manuzio</i>
+      <span class="label-number">1</span>
+      <span class="slogan">알도 마누치오가 활동한 15세기 이탈리아의 지도가 수록된 지리서</span>
+      <span class="slogan-en">Geography book with a map of 15th-century Italy in the age of Aldo Manuzio</span>
     </div>
-    <h1>
-      <span class="label-number">1</span> 『지리학』 Geographia · Geography
-    </h1>
+    <h1>『지리학』 Geographia · Geography</h1>
     <div class="meta">
       1482년 9월 10일 이전 추정<br>
       프란체스코 베를링기에리 Francesco Berlinghieri 저술<br>
@@ -74,13 +122,18 @@
     </div>
   </header>
 
+  <!-- 구분선 -->
+  <div class="divider"></div>
+
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
 『지리학』은 고대 그리스의 수학자·천문학자·지리학자 프톨레마이오스(2세기경 활동)의 작품을 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 이 책은 독일의 울름(Ulm)에서 발행된 초판본과 같은 시기의 것으로, 근대적 인쇄 방식인 동판화로 제작된 지도 31점이 포함되어 있다. 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 처음 추가되었다는 점에서 대단히 중요하다. 삽화 대부분은 작가를 알 수 없지만, 일부는 15세기 피렌체에서 활동했던 초기 인쇄업자이자 화가·판화가였던 프란체스코 로셀리(Francesco Rosselli, 1445–1513년경)의 작품으로 추정된다. 전시된 책은 동시대의 화가에 의해 정교하게 채색되었고, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
     </p>
     <p class="note">
-* 프톨레마이오스가 집필할 당시 책의 제목은 『지리안내서 Geographike Hyphegesis』이었고, 이후 15세기 라틴어로 번역되면서 『지리학 Geographia』, 혹은 『우주학 Cosmographia』라는 이름이 붙었다.<br>
+* 프톨레마이오스가 집필할 당시 책의 제목은 『지리안내서 Geographike Hyphegesis』이었고, 이후 15세기 라틴어로 번역되면서 『지리학 Geographia』, 혹은 『우주학 Cosmographia』라는 이름이 붙었다.
+    </p>
+    <p class="note">
 ** ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
     </p>
   </section>
