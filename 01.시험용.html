@@ -7,25 +7,64 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 24px 16px;
       line-height: 1.65;
-      font-size: 18px;
+      font-size: 17px;
+      background: #fff;
+      color: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    .note { font-size: 0.9rem; color:#555; white-space: pre-wrap; margin-top: 10px; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    header { margin-bottom: 18px; }
+    h1 {
+      font-size: 1.5rem;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .museum { font-weight: 600; margin-bottom: 10px; font-size: 1rem; }
+    .meta { color: #555; font-size: 0.9rem; margin-bottom: 12px; }
+
+    /* 작품번호 원형 */
+    .label-number {
+      background: #6B3F2A;   /* 포스터 갈색 */
+      color: #FDF6EC;        /* 아이보리 숫자 */
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    h2 { margin: 14px 0 6px; font-size: 1.05rem; }
+    .desc { white-space: pre-wrap; margin: 0; }
+    .note { font-size: 0.85rem; color:#555; margin: 4px 0 0; }
+
+    section { margin-bottom: 14px; }
+    footer { margin-top: 24px; font-size: 0.8rem; color: #777; text-align: center; }
+
+    /* 모바일 최적화 */
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 20px 14px; }
+      h1 { font-size: 1.35rem; }
+      h2 { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia · Geography</h1>
+    <div class="museum">
+      알도 마누치오가 활동한 15세기 이탈리아의 지도가 수록된 지리서<br>
+      <i>Geography book with a map of 15th-century Italy in the age of Aldo Manuzio</i>
+    </div>
+    <h1>
+      <span class="label-number">1</span> 『지리학』 Geographia · Geography
+    </h1>
     <div class="meta">
       1482년 9월 10일 이전 추정<br>
       프란체스코 베를링기에리 Francesco Berlinghieri 저술<br>
@@ -33,13 +72,35 @@
       <i>Impresso infirenze, per Nicolo Todescho &amp; emendato con somma diligentia dallo auctore</i><br>
       44.2×32.5cm | 로마 국립중앙도서관 소장, BNCR, 70.1.G.5
     </div>
-    <div class="meta">
-      알도 마누치오가 활동한 15세기 이탈리아의 지도가 수록된 지리서<br>
-      <i>Geography book with a map of 15th-century Italy in the age of Aldo Manuzio</i>
-    </div>
   </header>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-『지리학』은 고대 그리스의 수학자·천문학자·지리
+『지리학』은 고대 그리스의 수학자·천문학자·지리학자 프톨레마이오스(2세기경 활동)의 작품을 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 이 책은 독일의 울름(Ulm)에서 발행된 초판본과 같은 시기의 것으로, 근대적 인쇄 방식인 동판화로 제작된 지도 31점이 포함되어 있다. 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 처음 추가되었다는 점에서 대단히 중요하다. 삽화 대부분은 작가를 알 수 없지만, 일부는 15세기 피렌체에서 활동했던 초기 인쇄업자이자 화가·판화가였던 프란체스코 로셀리(Francesco Rosselli, 1445–1513년경)의 작품으로 추정된다. 전시된 책은 동시대의 화가에 의해 정교하게 채색되었고, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+    </p>
+    <p class="note">
+* 프톨레마이오스가 집필할 당시 책의 제목은 『지리안내서 Geographike Hyphegesis』이었고, 이후 15세기 라틴어로 번역되면서 『지리학 Geographia』, 혹은 『우주학 Cosmographia』라는 이름이 붙었다.<br>
+** ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+    </p>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Adaptation in (terza rima) of Ptolemy’s <i>Cosmographia</i> (2nd c. CE), with citations from other ancient and medieval authors. The cartographic significance of this work, produced at the same time as the first Ulm edition, is due to the addition of four modern maps to the traditional 27 in Ptolemy’s work: Spain, France, Italy and Palestine, engraved in copper for the first time. The engravings are anonymous, but are sometimes attributed to Francesco Rosselli, one of the first print merchants, a miniaturist and engraver active in Florence until 1513. The copy from the National Central Library of Rome was delicately painted in watercolour in the same period. On display is the map <i>Novella Italia</i>.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Adattamento in terza rima della <i>Cosmographia</i> di Tolomeo (sec. II d.C.), con citazioni da altri autori antichi e medievali. L’importanza cartografica di quest’opera, coeva alla prima edizione di Ulm, è dovuta all’aggiunta di 4 mappe moderne alle tradizionali 27 dell’opera tolemaica: Spagna, Francia, Italia e Palestina, per la prima volta incise in rame. Le incisioni sono anonime, ma talora attribuite a Francesco Rosselli, uno dei primi mercanti di stampe, miniatore e incisore attivo a Firenze fino al 1513. L’esemplare della Biblioteca nazionale centrale di Roma è finemente acquerellato da mano coeva. Si espone la tavola <i>Novella Italia</i>.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 National Museum of World Writing Systems
+  </footer>
+</body>
+</html>
