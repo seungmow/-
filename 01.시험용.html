@@ -21,10 +21,10 @@
       max-width: 720px;
       margin: 0 auto;
       padding: 24px 16px;
-      line-height: 1.65;
       font-size: 17px;
       background: #fff;
       color: var(--text);
+      line-height: 1.65;
     }
 
     header { margin-bottom: 18px; position: relative; min-height: 62px; }
@@ -100,7 +100,7 @@
     .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
 
     h2 {
-      margin: 14px 0 6px;
+      margin: 18px 0 20px;   /* ✅ 제목 위 18px, 아래 20px */
       font-size: 1.05rem;
       border-left: 4px solid var(--accent-brown);
       padding-left: 10px;
@@ -109,23 +109,14 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    /* 국문 본문 자연 줄바꿈 */
-    #kr .desc {
-      margin: 0;
+    /* 본문 공통 */
+    .desc {
+      margin-top: 0;   /* ✅ 본문 첫줄 위쪽 여백 제거 */
       font-size: 1rem;
       color: #222;
       white-space: normal;
       word-break: keep-all;
-      line-height: 1.75;
-    }
-
-    /* 영문/이탈리아어 본문 */
-    #en .desc, #it .desc {
-      white-space: normal;
-      margin: 0;
-      font-size: 1rem;
-      color: #222;
-      line-height: 1.65;
+      line-height: 1.65; /* ✅ 영어와 동일 간격 */
     }
 
     /* 국문: 위첨자였던 부분 */
@@ -136,7 +127,7 @@
       vertical-align: baseline;
     }
 
-    section { margin-bottom: 14px; }
+    section { margin-bottom: 20px; } /* ✅ 섹션 간 간격 */
     footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
 
     @media (max-width: 480px) {
