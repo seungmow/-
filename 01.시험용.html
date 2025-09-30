@@ -24,7 +24,7 @@
       font-size: 17px;
       background: #fff;
       color: var(--text);
-      line-height: 1.65;  /* ✅ 본문 줄간격 그대로 */
+      line-height: 1.65;
     }
 
     header { margin-bottom: 18px; position: relative; min-height: 62px; }
@@ -75,11 +75,19 @@
       line-height: 1.45;
       color: var(--text);
     }
-    h1.long-title i {
+
+    /* 원문/영문 제목 */
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
       font-family: 'Merriweather', serif;
       font-style: italic;
       font-weight: 600;
-      display: block;
+      display: inline;
     }
 
     /* 메타 */
@@ -100,23 +108,23 @@
     .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
 
     h2 {
-      margin: 18px 0 20px;   /* ✅ 제목 위 18px, 아래 20px */
+      margin: 18px 0 20px;
       font-size: 1.05rem;
       border-left: 4px solid var(--accent-brown);
       padding-left: 10px;
       color: var(--text);
       font-weight: 700;
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Noto Serif KR', sans-serif;
     }
 
     /* 본문 공통 */
     .desc {
-      margin-top: 0;   /* ✅ 본문 첫줄 위쪽 여백 제거 */
+      margin-top: 0;
       font-size: 1rem;
       color: #222;
       white-space: normal;
       word-break: keep-all;
-      line-height: 1.65; /* ✅ 줄간격 그대로 */
+      line-height: 1.65;
     }
 
     /* 국문: 위첨자였던 부분 */
@@ -125,6 +133,7 @@
       color: var(--muted-gray);
       font-weight: 400;
       vertical-align: baseline;
+      margin-right: 0.25em;  /* ✅ 본문과 약간 떨어지도록 여백 추가 */
     }
 
     /* ✅ 언어 블록 간 여백 */
@@ -140,8 +149,8 @@
       h1.long-title { font-size: 1.3rem; }
       .meta { font-size: 0.9rem; }
       h2 { font-size: 1rem; }
-      /* ✅ 모바일에서는 여백을 살짝 줄임 */
       section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
     }
   </style>
 </head>
@@ -153,9 +162,11 @@
 
     <h1 class="long-title">
       『크세노폰 단편집: 『헬레니카』에서 남은 것을 모아 묶음』<br>
-      <i>Xenophontos Paraleipomena, haper kai Ellēnika ekalese.</i>
-      <i>Geōrgiou Gemistou tou kai Plēthōnos …</i>
-      <i>Xenophon’s Paraleipomena</i>
+      <span class="sub-long">
+        <i>Xenophontos Paraleipomena, haper kai Ellēnika ekalese.</i><br>
+        <i>Geōrgiou Gemistou tou kai Plēthōnos …</i><br>
+        <i>Xenophon’s Paraleipomena</i>
+      </span>
     </h1>
 
     <div class="meta">
@@ -199,7 +210,7 @@ The Herodian text can cause confusion, as, despite being announced in Angelo Pol
     <h2>Descrizione (Italiano)</h2>
     <p class="desc">
 Prima edizione di alcune opere della storiografia greca, dedicata da Aldo al Duca d’Urbino Guidubaldo I da Montefeltro. 
-Si apre con gli <i>Hellenica</i> di Senofonte, poi una breve compilazione del neoplatonico Giorgio Gemisto Pletone basata su Diodoro e Plutarco, 
+Si apre con gli <i>Hellenica</i> di Senofonte, poi una breve compilazione del neoplatonico Giorgio Gemisto Pletone basata su Diodoro e Plutaro, 
 a seguire le <i>Storie</i> di Erodiano e gli <i>Scholia a Tucidide</i>, quest’ultimo pubblicato per la prima volta da Aldo nell’anno precedente (1502). 
 Nel testo di Erodiano il titolo può trarre in inganno, poiché, pur essendo annunciato in elegantissima traduzione latina di Angelo Poliziano, è stampato solamente in greco.
     </p>
