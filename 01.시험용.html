@@ -24,7 +24,7 @@
       font-size: 17px;
       background: #fff;
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.65;  /* ✅ 본문 줄간격 그대로 */
     }
 
     header { margin-bottom: 18px; position: relative; min-height: 62px; }
@@ -116,7 +116,7 @@
       color: #222;
       white-space: normal;
       word-break: keep-all;
-      line-height: 1.65; /* ✅ 영어와 동일 간격 */
+      line-height: 1.65; /* ✅ 줄간격 그대로 */
     }
 
     /* 국문: 위첨자였던 부분 */
@@ -127,7 +127,9 @@
       vertical-align: baseline;
     }
 
-    section { margin-bottom: 20px; } /* ✅ 섹션 간 간격 */
+    /* ✅ 언어 블록 간 여백 */
+    section { margin-bottom: 32px; }
+
     footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
 
     @media (max-width: 480px) {
@@ -138,6 +140,8 @@
       h1.long-title { font-size: 1.3rem; }
       .meta { font-size: 0.9rem; }
       h2 { font-size: 1rem; }
+      /* ✅ 모바일에서는 여백을 살짝 줄임 */
+      section { margin-bottom: 24px; }
     }
   </style>
 </head>
