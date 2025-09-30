@@ -3,152 +3,185 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>『지리학』 | 프란체스코 베를링기에리</title>
+  <title>『크세노폰 단편집』 | 알도 마누치오</title>
+
+  <!-- ✅ 폰트: 국문(제목) Noto Serif KR, 본문 Noto Sans KR, 영문 Merriweather -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      --accent-brown: #6B3F2A;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       max-width: 720px;
       margin: 0 auto;
       padding: 24px 16px;
       line-height: 1.65;
       font-size: 17px;
       background: #fff;
-      color: #222;
+      color: var(--text);
     }
 
-    header { margin-bottom: 18px; }
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
 
     /* 작품번호 원형 */
     .label-number {
-      background: #6B3F2A;   /* 포스터 갈색 */
-      color: #FDF6EC;        /* 아이보리 */
-      width: 28px; height: 28px;
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
       border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
-      font-size: 0.85rem;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 700;
       position: absolute;
       left: 0; top: 0;
     }
 
-    .museum {
-      font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 1rem;
-      position: relative;
-      padding-left: 38px; /* 번호만큼 들여쓰기 */
-    }
-
-    .slogan {
-      color: #6B3F2A;  /* 포스터 갈색 */
-      font-weight: 600;
-      font-size: 1rem;
+    /* 국문 큰 제목 */
+    h1.main-title {
       font-family: 'Noto Serif KR', serif;
-      text-decoration: underline; /* 밑줄 */
-      display: block;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.3;
     }
 
-    .slogan-en {
-      color: #444;
+    /* 영문 부제 */
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--accent-brown);
+      margin: 0 0 16px;
+      padding-left: 48px;
+      font-style: normal;
+      line-height: 1.3;
+    }
+
+    /* 긴 책 제목 (국문+라틴어) */
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    h1.long-title i {
+      font-family: 'Merriweather', serif;
       font-style: italic;
-      font-size: 0.95rem;
-      display: block;
+      font-weight: 600;
+      display: block;   /* 줄마다 같은 정렬 */
     }
 
-    h1 {
-      font-size: 1.5rem;
-      margin: 16px 0 14px;
-      color: #222; /* 검은색 */
-      text-align: left;
-    }
-
+    /* 메타 정보 */
     .meta {
+      font-family: 'Noto Sans KR', sans-serif;
       color: #555;
-      font-size: 0.9rem;
-      margin-bottom: 12px;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+    .meta i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 400; /* ✅ 보통 굵기 */
     }
 
-    /* 작품 설명 위 구분선 */
+    /* 구분선 */
     .divider {
-      border-bottom: 2px solid #6B3F2A;
+      border-bottom: 2px solid var(--accent-brown);
       margin: 20px 0 12px;
     }
 
     h2 {
       margin: 14px 0 6px;
       font-size: 1.05rem;
-      border-left: 4px solid #6B3F2A;
-      padding-left: 6px;
-      color: #222;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Sans KR', sans-serif;
     }
 
-    .desc { white-space: pre-wrap; margin: 0; }
+    .desc { white-space: pre-wrap; margin: 0; font-size: 1rem; color: #222; }
 
-    /* 각주 깔끔 정렬 */
-    .note {
-      font-size: 0.85rem;
-      color: #555;
-      margin: 6px 0 0;
-      padding-left: 1.4em;    /* 본문 들여쓰기 */
-      text-indent: -1em;      /* 별표만 내어쓰기 */
-      line-height: 1.5;
+    /* 괄호 안 인명/연대 처리 */
+    .note-inline {
+      font-size: 0.9em;
+      color: var(--muted-gray);
+      font-weight: 400;
     }
 
     section { margin-bottom: 14px; }
-    footer { margin-top: 24px; font-size: 0.8rem; color: #777; text-align: center; }
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
 
-    /* 모바일 최적화 */
+    /* 모바일 대응 */
     @media (max-width: 480px) {
-      body { font-size: 16px; padding: 20px 14px; }
-      h1 { font-size: 1.35rem; }
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 1rem; }
+      h1.long-title { font-size: 1.3rem; }
+      .meta { font-size: 0.9rem; }
       h2 { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">
-      <span class="label-number">1</span>
-      <span class="slogan">알도 마누치오가 활동한 15세기 이탈리아의 지도가 수록된 지리서</span>
-      <span class="slogan-en">Geography book with a map of 15th-century Italy in the age of Aldo Manuzio</span>
-    </div>
-    <h1>『지리학』 Geographia · Geography</h1>
+    <span class="label-number">23</span>
+
+    <!-- 국문 제목 -->
+    <h1 class="main-title">그리스 역사서를 모아서 펴낸 책(초판본)</h1>
+    <!-- 영문 부제 -->
+    <div class="subtitle-en">First edition of a collection of Greek historical writings</div>
+
+    <!-- 긴 원제 -->
+    <h1 class="long-title">
+      『크세노폰 단편집: 『헬레니카』에서 남은 것을 모아 묶음』<br>
+      <i>Xenophontos Paraleipomena, haper kai Ellēnika ekalese.</i>
+      <i>Geōrgiou Gemistou tou kai Plēthōnos …</i>
+      <i>Xenophon’s Paraleipomena</i>
+    </h1>
+
     <div class="meta">
-      1482년 9월 10일 이전 추정<br>
-      프란체스코 베를링기에리 Francesco Berlinghieri 저술<br>
-      이탈리아 피렌체, 니콜로 토데스코(니콜로 디 로렌조) 인쇄, 저자가 극도의 주의를 기울여 편집<br>
-      <i>Impresso infirenze, per Nicolo Todescho &amp; emendato con somma diligentia dallo auctore</i><br>
-      44.2×32.5cm | 로마 국립중앙도서관 소장, BNCR, 70.1.G.5
+      1503년 10월<br>
+      <span>이탈리아 베네치아, 알도 마누치오 신아카데미 인쇄</span><br>
+      <i>Venetiis, in Aldi Neacademia</i><br>
+      <span>31.7×22.0cm | 로마 국립중앙도서관 소장, BNCR, 68.8.E.22.2</span>
     </div>
   </header>
 
-  <!-- 구분선 -->
   <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-『지리학』은 고대 그리스의 수학자·천문학자·지리학자 프톨레마이오스(2세기경 활동)의 작품을 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 이 책은 독일의 울름(Ulm)에서 발행된 초판본과 같은 시기의 것으로, 근대적 인쇄 방식인 동판화로 제작된 지도 31점이 포함되어 있다. 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 처음 추가되었다는 점에서 대단히 중요하다. 삽화 대부분은 작가를 알 수 없지만, 일부는 15세기 피렌체에서 활동했던 초기 인쇄업자이자 화가·판화가였던 프란체스코 로셀리(Francesco Rosselli, 1445–1513년경)의 작품으로 추정된다. 전시된 책은 동시대의 화가에 의해 정교하게 채색되었고, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
-    </p>
-    <p class="note">
-* 프톨레마이오스가 집필할 당시 책의 제목은 『지리안내서 Geographike Hyphegesis』이었고, 이후 15세기 라틴어로 번역되면서 『지리학 Geographia』, 혹은 『우주학 Cosmographia』라는 이름이 붙었다.
-    </p>
-    <p class="note">
-** ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+이 책은 그리스 역사서를 묶은 초판본으로, 알도 마누치오가 <span class="note-inline">Urbino</span> 공작 <span class="note-inline">Guidubaldo I da Montefeltro (1472–1508)</span>에게 헌정하였다. 책은 <span class="note-inline">Xenophon</span>의 <i>Hellenica</i>로 시작하며, 이어 신플라톤주의자 <span class="note-inline">Georgios Gemistos Plethon (1355년경–1452)</span>의 짧은 편집물이 <span class="note-inline">Diodorus Siculus (기원전 1세기 활동)</span>과 <span class="note-inline">Plutarchus (40년경–120년경)</span>의 텍스트를 바탕으로 쓴 역사책 <i>De iis quae post pugnam Mantinensem apud Graecos gesta sunt</i>를 실었다. 그 다음에는 <span class="note-inline">Herodianus (170년경–240년경)</span>의 『역사』 전문과, 알도가 1년 전(1502)에 처음으로 출판한 <span class="note-inline">Thucydides</span>의 『역사』 주석서 <i>Scholia</i>가 실려 있다. 헤로디아노스의 『역사』는 제목이 다소 오해를 불러일으킬 수 있는데, <span class="note-inline">Angelo Poliziano (1454–1494)</span>의 우아한 라틴어 번역이 예고되어 있음에도 실제로는 오직 그리스어로만 인쇄되어 있기 때문이다.
     </p>
   </section>
 
   <section id="en">
     <h2>Description (English)</h2>
     <p class="desc">
-Adaptation in (terza rima) of Ptolemy’s <i>Cosmographia</i> (2nd c. CE), with citations from other ancient and medieval authors. The cartographic significance of this work, produced at the same time as the first Ulm edition, is due to the addition of four modern maps to the traditional 27 in Ptolemy’s work: Spain, France, Italy and Palestine, engraved in copper for the first time. The engravings are anonymous, but are sometimes attributed to Francesco Rosselli, one of the first print merchants, a miniaturist and engraver active in Florence until 1513. The copy from the National Central Library of Rome was delicately painted in watercolour in the same period. On display is the map <i>Novella Italia</i>.
+First edition of several works of Greek historiography, dedicated by Aldo Manuzio to <span class="note-inline">Guidubaldo I da Montefeltro, Duke of Urbino (1472–1508)</span>. It opens with Xenophon’s <i>Hellenica</i>, followed by a short compilation attributed to the Neoplatonist <span class="note-inline">Gemistos Plethon (c.1355–1452)</span>, based on <span class="note-inline">Diodorus Siculus (1st c. BCE)</span> and <span class="note-inline">Plutarch (c.40–c.120)</span>. Then come Herodian’s <i>Histories</i> and <i>Scholia to Thucydides</i>, the latter of which Manuzio had published for the first time the previous year (1502). The Herodian text can cause confusion, as, despite being announced in Angelo Poliziano’s elegant Latin translation, it was only printed in Greek.
     </p>
   </section>
 
   <section id="it">
     <h2>Descrizione (Italiano)</h2>
     <p class="desc">
-Adattamento in terza rima della <i>Cosmographia</i> di Tolomeo (sec. II d.C.), con citazioni da altri autori antichi e medievali. L’importanza cartografica di quest’opera, coeva alla prima edizione di Ulm, è dovuta all’aggiunta di 4 mappe moderne alle tradizionali 27 dell’opera tolemaica: Spagna, Francia, Italia e Palestina, per la prima volta incise in rame. Le incisioni sono anonime, ma talora attribuite a Francesco Rosselli, uno dei primi mercanti di stampe, miniatore e incisore attivo a Firenze fino al 1513. L’esemplare della Biblioteca nazionale centrale di Roma è finemente acquerellato da mano coeva. Si espone la tavola <i>Novella Italia</i>.
+Prima edizione di alcune opere della storiografia greca, dedicata da Aldo al duca d’Urbino <span class="note-inline">Guidubaldo I da Montefeltro (1472–1508)</span>. Si apre con gli <i>Hellenica</i> di Senofonte, seguiti da una breve compilazione attribuita al neoplatonico <span class="note-inline">Giorgio Gemisto Pletone (1355–1452)</span>, basata su <span class="note-inline">Diodoro (I sec. a.C.)</span> e <span class="note-inline">Plutarco (40–120)</span>. Seguono le <i>Storie</i> di <span class="note-inline">Erodiano (170–240)</span> e gli <i>Scholia a Tucidide</i>, quest’ultimo pubblicato per la prima volta da Aldo l’anno precedente (1502).
     </p>
   </section>
 
