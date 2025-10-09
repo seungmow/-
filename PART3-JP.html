@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第2部。阿尔多·马努齐奥：引领印刷革新 | 阿尔多·马努齐奥特展</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent-brown: #6B3F2A;
+      --muted-gray: #777;
+      --text: #222;
+      --bg: #fff;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 16px 40px;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* 상단 반원 */
+    .curve-wrap {
+      width: 100%;
+      max-width: 720px;
+      height: 180px;
+      position: relative;
+      margin: 60px auto 40px;
+    }
+
+    .curve-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .part-title {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Merriweather', serif;
+      color: var(--accent-brown);
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: var(--accent-brown);
+      text-align: center;
+      margin: 12px 0 24px;
+      line-height: 1.45;
+    }
+
+    p {
+      margin: 0 0 18px;
+      word-break: break-all; /* ✅ 중국어 줄바꿈 자연스럽게 */
+      white-space: normal;
+    }
+
+    footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; }
+      .curve-wrap { height: 140px; margin-top: 40px; }
+      .part-title { font-size: 1.6rem; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="curve-wrap">
+    <!-- 🎨 패널의 실제 반원 크기 -->
+    <svg viewBox="0 0 720 360" preserveAspectRatio="xMidYMid meet">
+      <path d="M0,360 A360,360 0 0 1 720,360" fill="none" stroke="#6B3F2A" stroke-width="1.2"/>
+    </svg>
+    <div class="part-title">第2部</div>
+  </div>
+
+  <h1>阿尔多·马努齐奥：引领印刷革新</h1>
+
+  <main>
+    <p>
+      阿尔多•马努齐奥于威尼斯创立“阿尔丁印刷厂”，开创了出版业的革新之路。当时的威尼斯资本雄厚，是欧洲重要的海上贸易中心。阿尔多不仅创制出既便于阅读又节省纸张的斜体字，并积极推广分号（Semicolon）与单引号（Apostrophe）等标点符号，显著提升了文本的可读性。同时，他率先采用可单手持握的八开本(Octavo)图书，使得人人皆可轻松携带，促进了近乎现代的个人阅读文化的诞生。此外，得益于学者们对希腊与拉丁语古典文献的精心校勘，他坚持以原文印制，终使许多濒临散佚的典籍存续流传。阿尔多集学者之博识、编辑之敏感和事业家之远见于一身，在威尼斯纷繁激荡的出版市场中稳健立足，其出版物广为流传，影响深远。
+    </p>
+  </main>
+
+  <footer>© 2025 National Museum of World Writing Systems</footer>
+</body>
+</html>
