@@ -3,53 +3,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『역사: 각각 무사의 이름으로 구별된 9장』 | 알도 마누치오</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-navy: #2D3E63;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-navy);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-navy);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-navy);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #000;
+      margin-top: 6px;
+    }
+
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-navy); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-navy);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.15em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">22</span>
+    <h1 class="main-title">헤로도토스의 『역사』를 그리스어 원문으로 처음 인쇄한 책(초판본)</h1>
+    <div class="subtitle-en">First edition of Herodotus’s <i>Histories</i> printed in the original Greek</div>
+
+    <h1 class="long-title">
+      『역사: 각각 무사의 이름으로 구별된 9장』<br>
+      <span class="sub-long"><i>Hīrodotou logoi ennea, oiper epikalountai Mousai</i><br><i>Herodoti libri nouem quibus musarum indita sunt nomina</i><br><i>Histories</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1502년 9월<br>
+      헤로도토스 Herodotus 저술<br>
+      이탈리아 베네치아, 알도의 인쇄소에서 인쇄<br>
+      Venetiis, in domo Aldi<br>
+      31.0×22.0cm ｜ 국립세계문자박물관 소장, MoW 228
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 고대 그리스의 역사가 헤로도토스<span class="note-inline">Herodotus, 기원전 484년경–425년경</span>의 『역사』 초판본이다. 
+알도 마누치오는 투키디데스<span class="note-inline">Thucydides, 기원전 460년경–400년경</span>의 『펠로폰네소스 전쟁사』를 출간한 지 불과 4개월 만에 
+그리스어로 인쇄된 이 책을 완성하였다. 
+『역사』는 총 9장으로 구성되어 있으며, 알도는 아홉 무사 여신<span class="note-inline">Musae</span> 각각의 이름을 따서 각 장의 이름을 붙였다. 
+서문에는 베르가모<span class="note-inline">Bergamo</span> 출신 인문주의자 조반니 페를란차 데 루피노니<span class="note-inline">Giovanni Perlanza de’ Ruffinoni, 1476–1503 활동</span>
+(일명 칼푸르니오<span class="note-inline">Calfurnio</span>)에게 바친 헌사가 수록되어 있다. 
+알도는 이 편지에서 인쇄에 사용된 원본 필사본의 오류를 바로잡아 교정했음을 밝힘과 동시에 
+허구 의혹과 역사적 신빙성 부족이라는 비난에 맞서 헤로도토스를 적극 옹호하고 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Four months after publishing Thucydides’ <i>History of the Peloponnesian War</i>, Aldo Manuzio completed the first edition of Herodotus’s 
+<i>Histories</i> printed in Greek. 
+The work is divided into nine books and opens with a dedicatory letter to the humanist Giovanni Perlanza de' Ruffinoni from Bergamo, 
+styled Calfurnio (fl. 1476–1503), in which Manuzio claims to have organized the text, corrected the errors in the manuscripts used for publishing, 
+and defends Herodotus from accusations of falsehood and poor historical soundness.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Quattro mesi dopo aver pubblicato la <i>Guerra del Peloponneso</i> di Tucidide, Aldo completò la prima edizione delle <i>Historiae</i> di Erodoto stampata in lingua greca. 
+L’opera è suddivisa in nove libri e si apre con una lettera dedicatoria all’umanista bergamasco Giovanni Perlanza de’ Ruffinoni detto Calfurnio (fl. 1476–1503), 
+nella quale Aldo afferma di aver risistemato il testo, correggendolo dagli errori contenuti nei manoscritti usati per la stampa, 
+e difende Erodoto dalle accuse di falsità e scarsa attendibilità storica.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
