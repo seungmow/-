@@ -3,53 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『에트나 산에 대하여』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-brown: #2D3E63;  /* ✅ 09–34번 구간: 남색 계열 */
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-brown);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: var(--muted-gray);
+      margin-left: 0.15em;
+    }
+
+    .notes {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 16px;
+      line-height: 1.55;
+    }
+    .notes p {
+      margin: 4px 0;
+      text-indent: -1.5em;
+      padding-left: 1.5em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">09</span>
+    <h1 class="main-title">벰보체로 인쇄된 피에트로 벰보의 시칠리아 기행기</h1>
+    <div class="subtitle-en">Pietro Bembo’s Sicilian journey printed in the Bembo type</div>
+
+    <h1 class="long-title">
+      『에트나 산에 대하여』<br>
+      <span class="sub-long">Petri Bembi De Aetna ad Angelum Chabrielem liber<br>Pietro Bembo’s on Etna to Angelo Gabriel</span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1495[1496]년 2월<br>
+      피에트로 벰보 Pietro Bembo 저술<br>
+      이탈리아 베네치아, 로마 사람 알도의 인쇄소에서 인쇄<br>
+      Impressum Venetiis, in aedibus Aldi Romani<br>
+      20.7×15.3cm ｜ 국립마르차나도서관 소장, BNM, ALDINE 380
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+『에트나 산에 대하여』는 인문주의자 피에트로 벰보<span class="note-inline">Pietro Bembo, 1470–1547</span>가 시칠리아 체류 후에 쓴 짧은 대화체의 수필로, 그와 함께 메시나<span class="note-inline">Messina</span>에서 콘스탄티노스 라스카리스<span class="note-inline">Constantinus Lascaris, 1434–1501?</span>로부터 그리스어를 배운 베네치아 귀족 안젤로 가브리엘<span class="note-inline">Angelo Gabriel, 1470–1533</span>에게 헌정되었다. 
+이 책은 전문이 라틴어로 된 최초의 알도 마누치오 출판본이다. 출판을 위해 볼로냐 출신의 활자 장인* 프란체스코 그리포<span class="note-inline">Francesco Griffo, 1450–1518</span>가 특별히 제작한 우아한 로만체 활자(Roman type, 114 R)가 사용됐다. 
+이 활자는 훗날 ‘벰보체’로도 알려진다. 전시된 책은 개정판으로, B2r장 3행에 있는 ‘qnia’가 ‘quia’로 수정된 사실 등을 통해 개정 사실을 확인할 수 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+
+    <div class="notes">
+      <p>* ‘활자 장인’ 또는 ‘부형(父型, patrix) 장인’: 금속활자 공정 과정에서는 금속 막대 위에 도드라진 펀치(punch) 부형을 깎아낸 후, 황동판 위에 부형을 두드려 활자의 모형(母型)을 만든다. 이 중 활자를 디자인하고 부형을 만드는 장인들을 ‘punchcutter’라고 부른다.</p>
+    </div>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Short dialogue composed by the humanist Pietro Bembo (1470–1547) on his return from a period in Sicily. 
+It is dedicated to the Venetian patrician Angelo Gabriel, with whom he studied Greek in Messina under the philologist Constantine Lascaris (1434–1501?). 
+It is the first work Aldo Manuzio published entirely in Latin in an elegant Roman typeface (114 R) cast for the occasion by the Bolognese Francesco Griffo (1450–1518) and known as the “Bembo typeface”. 
+The copy displayed is from a second state, as demonstrated, for example, by the correction of “qnia” to “quia” on leaf B2r, line 3.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Breve dialogo composto dall’umanista Pietro Bembo (1470–1547) al ritorno da un soggiorno in Sicilia e dedicato al patrizio veneziano Angelo Gabriel, col quale aveva condiviso gli studi di lingua greca a Messina presso il filologo Costantino Lascaris (1434–1501?). 
+È la prima opera pubblicata da Aldo interamente in lingua latina, in un elegante carattere romano (114 R) forgiato per l’occasione dal bolognese Francesco Griffo (1450–1518) e noto come «carattere Bembo». 
+L’esemplare esposto appartiene ad un secondo stato come dimostra, ad esempio, la correzione di «qnia» in «quia» a carta B2r linea 3.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
