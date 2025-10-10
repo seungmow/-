@@ -3,53 +3,218 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『헤로와 레안드로스 이야기』 | 알도 마누치오</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-navy: #2D3E63;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-navy);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-navy);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-navy);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #000;
+      margin-top: 6px;
+    }
+
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-navy); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-navy);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.15em;
+    }
+
+    .notes {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 16px;
+      margin-left: 0;
+      padding-left: 0;
+      line-height: 1.55;
+    }
+
+    .notes p {
+      margin: 4px 0;
+      text-indent: -1.5em;
+      padding-left: 1.5em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">20</span>
+    <h1 class="main-title">그리스어 원문과 라틴어 번역이 함께 실린 문학 작품</h1>
+    <div class="subtitle-en">A literary work printed with the original Greek text and its Latin translation</div>
+
+    <h1 class="long-title">
+      『헤로와 레안드로스 이야기』<br>
+      <span class="sub-long"><i>Opusculum de Herone et Leandro</i><br><i>Hero and Leander</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1495–1497년 추정<br>
+      무사이오스 Musaeus 저술<br>
+      에네티아이스(베네치아), 필헬레노스* 로마인 알도의 노력과 능력으로 인쇄<br>
+      Egrafi en Enetiais, dapanii kai dexiotiti Aldou tou filellinos kai romaiou<br>
+      21.0×15.5cm ｜ 로마 국립중앙도서관 소장, BNCR, 70.3.F.63
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 헤로와 레안드로스의 비극적 사랑 이야기로, 두 개의 책자<span class="note-inline">fascicolo</span>가 교차 편집된 형태로 구성되어 있다. 
+한 책자는 1495년 9월에서 11월 사이에 인쇄된 시인 무사이오스<span class="note-inline">Musaeus, 6세기 활동</span>의 그리스어 원문 10장이고, 
+다른 책자는 1497년경에 인쇄된 크레타 출신의 학자 마르코 무수루스<span class="note-inline">Marco Musuro, 1475–1517</span>가 라틴어로 번역한 12장이다. 
+이 책에는 두 장의 대형 목판화가 실려 있으며, 왼쪽에서 오른쪽으로 헤로가 연인 레안드로스를 기다리는 장면, 
+레안드로스가 바다에서 익사하는 장면, 그리고 해변에 떠밀려온 그의 시신을 보고 자살하는 헤로의 모습이 차례로 묘사되어 있다. 
+머리말에는 무사이오스를 신화 속 오르페우스의 스승이자 호메로스보다도 이전 인물로 잘못 소개하고 있으나, 
+실제로는 기원후 6세기의 시인이자 문법학자 무사이오스<span class="note-inline">Musaeus Grammaticus</span>와 같은 인물로 보는 것이 옳다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+
+    <div class="notes">
+      <p>* 필헬레노스(philhellenos): 그리스어로 ‘그리스 문화를 사랑하는 사람’이라는 뜻.</p>
+    </div>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+This edition of the tragic love story of Hero and Leander is made up of two interleaved quires: 
+ten leaves in Greek by the poet Musaeus, printed between September and November 1495, 
+alternated with 12 leaves carrying the Latin translation by the Cretan Marcus Musurus (1475–1517) dated 1497. 
+Two large woodblock prints depict, from left to right: the beautiful Hero waiting for her beloved Leander; 
+the latter’s drowning; and Hero’s suicide on seeing her lover’s body on the beach. 
+The foreword erroneously claims that the author is Musaeus of Athens, teacher of the mythical Orpheus, 
+who lived long before Homer, when in fact it is Musaeus Grammaticus, a poet from the 5th century CE.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+L’edizione della tragica storia d’amore di Ero e Leandro è composta da due fascicoli intercalati: 
+dieci carte in lingua greca del poeta Museo, stampate tra settembre e novembre 1495, 
+alternate con dodici con la traduzione in latino del cretese Marco Musuro (1475–1517), datate al 1497. 
+Due ampie xilografie raffigurano, da sinistra a destra, la bella Ero in attesa dell’amato Leandro, 
+l’annegamento di quest’ultimo e il suicidio di Ero alla vista del corpo sulla spiaggia. 
+Museo è erroneamente presentato nella prefazione come il maestro del mitico Orfeo, 
+vissuto molto prima di Omero, ma è da identificarsi in Museo Grammatico, un poeta del V secolo d.C.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
