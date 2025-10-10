@@ -3,53 +3,194 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『아솔로 사람들』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-brown: #6B3F2A;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-brown);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: var(--muted-gray);
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">06</span>
+    <h1 class="main-title">이탈리아어 표준화의 선구자로 평가받는 피에트로 벰보의 대표 작품</h1>
+    <div class="subtitle-en">The major work of Pietro Bembo, recognized as a pioneer in the standardization of the Italian language</div>
+
+    <h1 class="long-title">
+      『아솔로 사람들』<br>
+      <span class="sub-long"><i>Gli Asolani</i><br><i>Gli Asolani (The People of Asolo)</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1505년 3월<br>
+      피에트로 벰보 Pietro Bembo 저술<br>
+      이탈리아 베네치아, 로마 사람 알도의 인쇄소 인쇄<br>
+      Impressi in Venetia, nelle case d’Aldo Romano<br>
+      21.2×14.0cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.7.D.21
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 피에트로 벰보<span class="note-inline">Pietro Bembo, 1470–1547</span>의 초기 작품으로, 정신적인 사랑을 주제로 다루었다. 
+책의 본문은 산문과 시가 조합된 <span class="note-inline">prosimetro</span>의 형식이고, 보카치오<span class="note-inline">Boccaccio, 1313–1375</span>의 『데카메론 <i>Decameron</i>』에서 영감을 받은 액자식 구성의 서사 구조로 되어 있다. 
+그 배경은 키프로스 여왕인 카테리나 코르나로<span class="note-inline">Caterina Cornaro</span>의 정원이 있는 아솔로(Asolo)에서 보낸 3일간의 이야기다. 
+일부 판본은 작가가 교황 알렉산데르 6세<span class="note-inline">Papa Alessandro VI, 1431–1503</span>의 딸 루크레치아 보르자<span class="note-inline">Lucrezia Borgia, 1480–1519</span>에게 바치는 편지(a1v–a2v 장)로 시작한다. 
+그러나 두 번째 발행본에서는 당시 보르자 가문에 적대적이었던 새 교황 율리오 2세 델라 로베레<span class="note-inline">Papa Giulio II della Rovere, 1443–1513</span>와의 마찰을 피하기 위해 이 헌사가 삭제되었고, 해당 면은 공백으로 남겨졌다. 
+전시된 책은 두 번째 발행본이다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+First edition of Pietro Bembo’s (1470–1547) treatise on platonic love. 
+A form of prosimetrum (combination of prose and verse), it has a narrative frame inspired by Boccaccio’s <i>Decameron</i> and is divided into three days, all set in the gardens of Catherine Cornaro, queen of Cyprus, in Asolo. 
+Some copies open with the author’s dedicatory letter to Lucrezia Borgia, daughter of Pope Alexander VI (leaves a1v–a2v). 
+In a later issue the dedication was removed to avoid problems with the new pope, Julius II, of the della Rovere family, enemies of the Borgias, and leaves a1v–a2v were left blank. 
+The volume displayed is a copy of the second issue.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Prima edizione del trattato di Pietro Bembo (1470–1547) dedicato all’amore platonico. 
+In forma di prosimetro (commistione di prosa e poesia) ha una cornice narrativa ispirata al <i>Decameron</i> di Boccaccio e una divisione in tre giornate, ambientate ad Asolo nei giardini della regina di Cipro, Caterina Cornaro. 
+Alcuni esemplari si aprono con una lettera dedicatoria dell’autore a Lucrezia Borgia, figlia di papa Alessandro VI Borgia (carte a1v–a2v); 
+in un’emissione successiva la dedica fu eliminata per evitare problemi col nuovo papa Giulio II della Rovere, nemico della famiglia Borgia, e le carte a1v–a2v furono lasciate bianche. 
+Il volume esposto è un esempio della seconda emissione.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
