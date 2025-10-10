@@ -3,53 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『폴리필로의 꿈』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-brown: #2D3E63;  /* ✅ 09–34번 구간: 남색 계열 */
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-brown);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: var(--muted-gray);
+      margin-left: 0.15em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">10</span>
+    <h1 class="main-title">170여 점의 목판 삽화가 수록된 르네상스 시대의 가장 아름다운 책</h1>
+    <div class="subtitle-en">Renaissance masterpiece with over 170 woodcut illustrations</div>
+
+    <h1 class="long-title">
+      『폴리필로의 꿈』<br>
+      <span class="sub-long">
+        <i>Hypnerotomachia Poliphili</i><br>
+        <i>Hypnerotomachia Poliphili (Poliphilus’s strife of love in a dream)</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1499년 12월<br>
+      프란체스코 콜론나 Francesco Colonna 저술<br>
+      이탈리아 베네치아, 알도 마누치오의 인쇄소에서 극도로 정밀하게 인쇄<br>
+      Venetiis, in ædibus Aldi Manutii, accuratissime<br>
+      29.3×21.5cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.8.E.12
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+『<i>폴리필로의 꿈</i>』은 알도 마누치오가 의뢰를 받아 처음으로 출간한 속어(이탈리아어) 책이다. 르네상스 시대의 가장 유명한 삽화책으로, 170여 점의 목판화가 수록되어 있다. 
+오랫동안 저자가 수수께끼로 남아 여러 세기에 걸쳐 학자들의 호기심을 자극하였으나, 오늘날 학계는 대부분 도미니크 수도회의 수도사 프란체스코 콜론나<span class="note-inline">Francesco Colonna, 1433–1527</span>를 이 책의 저자로 지목하고 있다. 
+책의 본문에는 라틴어, 그리스어, 히브리어, 칼데아어와 더불어 상형문자까지, 다양한 문자가 등장하여 눈길을 끈다. 
+d7r장에는 알도가 고대 로마 주화에서 가져온 닻과 돌고래 형상이 나타나는데, 알도는 이를 1501년부터 인쇄소의 표식으로 삼았다. 
+한편, m6r장에 수록된 프리아포스<span class="note-inline">Priapus</span>의 승리 장면은 고대 포르노 삽화의 시초로 여겨지고 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+First vernacular work printed on commission by Manuzio. 
+It is the most famous illustrated book of the Renaissance, with 170 woodblock prints alongside the text or on full pages. 
+The author’s name was long a mystery, piquing the curiosity of scholars over the centuries and helping make this work a literary case. 
+Today it is agreed that it is Francesco Colonna, a Dominican friar of the church of Santi Giovanni e Paolo in Venice, unrelated to the noble Roman family of the same name. 
+Worthy of note is the use of different alphabets (Latin, Greek, Hebrew, Chaldean) and hieroglyphics. 
+On leaf d7r appears for the first time the reproduction of a dolphin around an anchor, an image taken from an ancient Roman coin, which Manuzio decided to use as his printer’s mark from the year 1501. 
+On leaf m6r we see the triumph of the god Priapus, considered the first pornographic illustration in antiquity.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Prima opera in lingua volgare stampata da Manuzio, realizzata su commissione. 
+È il più famoso libro illustrato del Rinascimento, con 170 xilografie inserite nel testo o a piena pagina. 
+Il nome dell’autore è stato a lungo un mistero e ha contribuito a farne un caso letterario incuriosendo studiosi di tutte le epoche, ma viene oggi identificato concordemente con quello di Francesco Colonna, frate domenicano della chiesa dei Santi Giovanni e Paolo di Venezia, senza nessun collegamento con la famiglia nobile romana dei Colonna. 
+Notevole la presenza di diversi tipi di alfabeto (latino, greco, ebraico, caldaico), oltre a geroglifici. 
+A carta d7r si può apprezzare per la prima volta la riproduzione di un delfino attorno a un’ancora, immagine tratta da un’antica moneta romana che Manuzio decise di usare come marca tipografica dal 1501 in avanti. 
+A carta m6r, invece, il trionfo del dio Priapo è considerato la prima illustrazione pornografica dell’antichità.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
