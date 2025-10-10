@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>『크세노폰 단편집』 | 알도 마누치오</title>
+  <title>『크세노폰 단편집: 「헬레니카」에서 남은 것을 모아 묶음』 | 알도 마누치오</title>
 
-  <!-- ✅ 폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --accent-brown: #6B3F2A;
+    :root {
+      --accent-navy: #2D3E63;
       --ivory: #FDF6EC;
       --muted-gray: #777;
       --text: #222;
@@ -25,47 +24,41 @@
       background: #fff;
       color: var(--text);
       line-height: 1.65;
+      word-break: keep-all;
     }
 
     header { margin-bottom: 18px; position: relative; min-height: 62px; }
 
-    /* 작품번호 원형 */
     .label-number {
-      background: var(--accent-brown);
+      background: var(--accent-navy);
       color: var(--ivory);
       width: 36px; height: 36px;
       border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      font-weight: 700;
-      position: absolute;
-      left: 0; top: 0;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
     }
 
-    /* 국문 큰 제목 */
     h1.main-title {
       font-family: 'Noto Serif KR', serif;
       font-weight: 700;
       font-size: 1.9rem;
-      color: var(--accent-brown);
+      color: var(--accent-navy);
       margin: 0 0 6px;
       padding-left: 48px;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
-    /* 영문 부제 */
     .subtitle-en {
       font-family: 'Merriweather', serif;
       font-weight: 400;
-      font-size: 1.15rem;
-      color: var(--accent-brown);
-      margin: 0 0 16px;
+      font-size: 1.05rem;
+      color: var(--accent-navy);
+      margin: 0 0 14px;
       padding-left: 48px;
-      font-style: normal;
       line-height: 1.3;
     }
 
-    /* 긴 책 제목 */
     h1.long-title {
       font-family: 'Noto Serif KR', serif;
       font-weight: 700;
@@ -76,21 +69,19 @@
       color: var(--text);
     }
 
-    /* 원문/영문 제목 */
     .sub-long {
       display: block;
       font-size: 1.15rem;
-      color: #333;
+      color: #000;
       margin-top: 6px;
     }
+
     .sub-long i {
       font-family: 'Merriweather', serif;
       font-style: italic;
       font-weight: 600;
-      display: inline;
     }
 
-    /* 메타 */
     .meta {
       font-family: 'Noto Sans KR', sans-serif;
       color: #555;
@@ -99,44 +90,33 @@
       padding-left: 28px;
       line-height: 1.45;
     }
-    .meta i {
-      font-family: 'Merriweather', serif;
-      font-style: italic;
-      font-weight: 400;
-    }
 
-    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+    .divider { border-bottom: 2px solid var(--accent-navy); margin: 20px 0 12px; }
 
     h2 {
       margin: 18px 0 20px;
       font-size: 1.05rem;
-      border-left: 4px solid var(--accent-brown);
+      border-left: 4px solid var(--accent-navy);
       padding-left: 10px;
       color: var(--text);
       font-weight: 700;
       font-family: 'Noto Serif KR', sans-serif;
     }
 
-    /* 본문 공통 */
     .desc {
       margin-top: 0;
       font-size: 1rem;
       color: #222;
-      white-space: normal;
-      word-break: keep-all;
       line-height: 1.65;
+      word-break: keep-all;
     }
 
-    /* 국문: 위첨자였던 부분 */
     .note-inline {
       font-size: 0.85em;
-      color: var(--muted-gray);
-      font-weight: 400;
-      vertical-align: baseline;
-      margin-right: 0.25em;  /* ✅ 본문과 약간 떨어지도록 여백 추가 */
+      color: #777;
+      margin-left: 0.15em;
     }
 
-    /* ✅ 언어 블록 간 여백 */
     section { margin-bottom: 32px; }
 
     footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
@@ -145,9 +125,8 @@
       body { font-size: 16px; padding: 18px 12px; }
       .label-number { width:34px;height:34px;font-size:0.95rem; }
       h1.main-title { font-size: 1.6rem; }
-      .subtitle-en { font-size: 1rem; }
+      .subtitle-en { font-size: 0.95rem; }
       h1.long-title { font-size: 1.3rem; }
-      .meta { font-size: 0.9rem; }
       h2 { font-size: 1rem; }
       section { margin-bottom: 24px; }
       .sub-long { font-size: 1.05rem; }
@@ -162,18 +141,14 @@
 
     <h1 class="long-title">
       『크세노폰 단편집: 「헬레니카」에서 남은 것을 모아 묶음』<br>
-      <span class="sub-long">
-        <i>Xenophontos Paraleipomena, haper kai Ellēnika ekalese.</i><br>
-        <i>Geōrgiou Gemistou tou kai Plēthōnos …</i><br>
-        <i>Xenophon’s Paraleipomena</i>
-      </span>
+      <span class="sub-long"><i>Xenophontos Paraleipomena, haper kai Ellēnika ekalese. Geōrgiou Gemistou tou kai Plēthōnos …</i><br><i>Xenophon's Paraleipomena</i></span>
     </h1>
 
     <div class="meta">
       1503년 10월<br>
-      <span>이탈리아 베네치아, 알도 마누치오 신아카데미 인쇄</span><br>
-      <i>Venetiis, in Aldi Neacademia</i><br>
-      <span>31.7×22.0cm | 로마 국립중앙도서관 소장, BNCR, 68.8.E.22.2</span>
+      이탈리아 베네치아, 알도 마누치오의 신아카데미 인쇄<br>
+      Venetiis, in Aldi Neacademia<br>
+      31.7×22.0cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.8.E.22.2
     </div>
   </header>
 
@@ -182,17 +157,16 @@
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-이 책은 그리스 역사서를 묶은 초판본으로, 알도 마누치오가 우르비노 <span class="note-inline">Urbino</span> 공작 
-귀도발도 1세 다 몬테펠트로 <span class="note-inline">Guidubaldo I da Montefeltro 1472–1508</span>에게 헌정하였다. 
-책은 크세노폰 <span class="note-inline">Xenophon</span>의 「헬레니카 <i>Hellenica</i>」로 시작하며, 이어서 신플라톤주의자 
-게오르기오스 게미스토스 플레톤 <span class="note-inline">Georgios Gemistos Plethon, 1355년경–1452</span>, 
-시칠리아 사람 디오도로스 <span class="note-inline">Diodorus Siculus, 기원전 1세기 활동</span>와 
-플루타르코스 <span class="note-inline">Plutarchus, 40년경–120년경</span>의 작품을 바탕으로 쓴 역사책 
-『만티네이아 전투 이후에 대하여 <i>De iis quae post pugnam Mantinensem apud Graecos gesta sunt</i>』를 실었다. 
-그 다음에는 헤로디아노스 <span class="note-inline">Herodianus, 170년경–240년경</span>의 『역사』 전문과, 알도가 1년 전 
-<span class="note-inline">1502</span>에 처음으로 출판한 투키디데스 <span class="note-inline">Thucydides</span>의 『역사』 주석서 <i>Scholia</i>가 실려 있다. 
-헤로디아노스의 『역사』는 제목이 다소 오해를 불러일으킬 수 있는데, 안젤로 폴리치아노 <span class="note-inline">Angelo Poliziano, 1454–1494</span>의 
-우아한 라틴어판을 예고하고 있음에도 실제로는 오직 그리스어로만 인쇄되어 있기 때문이다.
+이 책은 그리스 역사서를 묶은 초판본으로, 알도 마누치오가 우르비노<span class="note-inline">Urbino</span> 공작 귀도발도 1세 다 몬테펠트로<span class="note-inline">Guidubaldo I da Montefeltro, 1472–1508</span>에게 헌정하였다. 
+책은 크세노폰<span class="note-inline">Xenophon</span>의 『<i>헬레니카</i><span class="note-inline">Hellenica</span>』로 시작하며, 
+이어서 신플라톤주의자 게오르기오스 게미스토스 플레톤<span class="note-inline">Georgios Gemistos Plethon, 1355년경–1452</span>이 
+시칠리아 사람 디오도로스<span class="note-inline">Diodorus Siculus, 기원전 1세기 활동</span>와 플루타르코스<span class="note-inline">Plutarchus, 40년경–120년경</span>의 작품을 바탕으로 쓴 
+역사책 『<i>De iis quae post pugnam Mantinensem apud Graecos gesta sunt</i>』를 실었다. 
+그 다음에는 헤로디아노스<span class="note-inline">Herodianus, 170년경–240년경</span>의 『역사』 전문과 
+알도가 1년 전(1502)에 처음으로 출판한 투키디데스<span class="note-inline">Thucydides</span>의 『역사』의 주석서<span class="note-inline">Scholia</span>가 실려 있다. 
+헤로디아노스의 『역사』에 대해서는 제목이 다소 오해를 불러일으킬 수 있는데, 
+안젤로 폴리치아노<span class="note-inline">Angelo Poliziano, 1454–1494</span>가 번역한 우아한 라틴어판을 예고하고 있음에도 불구하고 
+실제로는 오직 그리스어로만 인쇄되어 있기 때문이다.
     </p>
   </section>
 
@@ -210,9 +184,10 @@ The Herodian text can cause confusion, as, despite being announced in Angelo Pol
     <h2>Descrizione (Italiano)</h2>
     <p class="desc">
 Prima edizione di alcune opere della storiografia greca, dedicata da Aldo al Duca d’Urbino Guidubaldo I da Montefeltro. 
-Si apre con gli <i>Hellenica</i> di Senofonte, poi una breve compilazione del neoplatonico Giorgio Gemisto Pletone basata su Diodoro e Plutaro, 
+Si apre con gli <i>Hellenica</i> di Senofonte, poi una breve compilazione del neoplatonico Giorgio Gemisto Pletone basata su Diodoro e Plutarco, 
 a seguire le <i>Storie</i> di Erodiano e gli <i>Scholia a Tucidide</i>, quest’ultimo pubblicato per la prima volta da Aldo nell’anno precedente (1502). 
-Nel testo di Erodiano il titolo può trarre in inganno, poiché, pur essendo annunciato in elegantissima traduzione latina di Angelo Poliziano, è stampato solamente in greco.
+Nel testo di Erodiano il titolo può trarre in inganno, poiché, pur essendo annunciato in elegantissima traduzione latina di Angelo Poliziano, 
+è stampato solamente in greco.
     </p>
   </section>
 
@@ -221,4 +196,3 @@ Nel testo di Erodiano il titolo può trarre in inganno, poiché, pur essendo ann
   </footer>
 </body>
 </html>
-
