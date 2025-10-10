@@ -3,53 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『베르길리우스 전집』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-brown: #2D3E63; /* 09–34 남색 계열 */
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-brown);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: var(--muted-gray);
+      margin-left: 0.15em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">12</span>
+    <h1 class="main-title">알도 마누치오가 최초로 전면 이탤릭체와 8절판형으로 인쇄한 책</h1>
+    <div class="subtitle-en">The first book printed wholly in italic type and in octavo format, published by Aldo Manuzio</div>
+
+    <h1 class="long-title">
+      『베르길리우스 전집』<br>
+      <span class="sub-long">
+        <i>Vergilius</i><br>
+        <i>Virgil</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1501년 4월<br>
+      푸블리우스 베르길리우스 마로 Publius Vergilius Maro 저술<br>
+      이탈리아 베네치아, 로마 사람 알도의 인쇄소에서 인쇄<br>
+      <i>Venetiis, ex aedibus Aldi Romani</i><br>
+      16.0×10.4cm ｜ 국립마르차나도서관 소장, BNM, D396D 244.2
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
-    </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+『베르길리우스 전집』은 알도 마누치오가 이탤릭체 활자와 8절판형<span class="note-inline">8°, 소형 판형</span>을 처음으로 전면 사용해 인쇄한 책으로, 최초의 ‘엔키리디아’<span class="note-inline">enchiridia</span>로 여겨진다. ‘엔키리디아’는 ‘손에 들고 다니는 책’을 의미하는 그리스어 Ἐγχειρίδιον에서 유래한 말이다. 에스파냐어를 사용하는 나라들에서는 이탤릭체 활자를 ‘그리포체’라고 불렀는데, 이는 볼로냐 출신의 활자 장인 프란체스코 그리포<span class="note-inline">Francesco Griffo, 1450–1518?</span>가 활자를 제작했기 때문이다. 알도는 이 활자체에 찬사를 보내며, 책 표지 뒷면에 이렇게 인쇄했다: “여기 그리스어 문법을 주었던 알두스가 이제는 라틴어 문법을 바친다. 이는 볼로냐 사람 프란체스코가 다이달로스<span class="note-inline">Daedalus, 그리스 신화에 나오는 명장</span>의 솜씨처럼 정교하게 새긴 것이다.” 전시된 책에는 같은 해 알도의 인쇄소에서 출판된 유베날리스와 페르시우스의 풍자시<span class="note-inline">Satirae di Giovenale e Persio</span>가 함께 제본되어 있다.
     </p>
   </section>
 
-  <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+First work to be printed entirely in italic type and in small format (8vo). Aldo inaugurated the so-called “enchiridia” series with this volume (from the Greek ἐγχειρίδιον: object held in the hand). In Spanish-speaking countries, italic type is called “litera grifa” because it was produced by the Bolognese engraver Francesco Griffo (or Grifo, ca. 1450–1518), lauded by Aldo on the verso of the frontispiece: “Qui graiis dedit Aldus, en latinis Dat nunc grammata scalpta daedaleis Francisci manibus Bononiensis”. The copy from the Biblioteca Marciana is bound with the Aldine edition of the <i>Satira</i> of Juvenal and Persius published in the same year.
+    </p>
+  </section>
 
-  </footer>
-</body>
-</html>
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Prima opera stampata completamente in <i>carattere</i> corsivo e in piccolo formato (in-8°), con la quale Aldo inaugurò la collana dei cosiddetti «<i>enchiridia</i>» (dal greco ἐγχειρίδιον: oggetto che si tiene in mano). Nei paesi di lingua spagnola, il carattere corsivo è detto «<i>litera grifa</i>», poiché fu realizzato dall’incisore bolognese Francesco Griffo (o Grifo, 1450-1518 circa), elogiato da Aldo sul verso del frontespizio: «Qui graiis dedit Aldus, en latinis Dat nunc grammata scalpta daedaleis Francisci manibus Bononiensis». L’esemplare della Biblioteca Marciana è
