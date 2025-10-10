@@ -3,53 +3,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『3행시들(신곡)』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-brown: #2D3E63; /* 09–34 남색 구간 */
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-brown);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-brown);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-brown);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-brown); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-brown);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: var(--muted-gray);
+      margin-left: 0.15em;
+    }
+
+      .notes p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.55;
+    margin: 4px 0;
+    text-indent: -1.5em;  /* ✅ 별표 내어쓰기 */
+    padding-left: 1.5em;  /* ✅ 본문 정렬 유지 */
+  }
+
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">14</span>
+    <h1 class="main-title">단테의 『신곡』을 8절판형으로 인쇄한 책</h1>
+    <div class="subtitle-en">An octavo edition of Dante’s Divine Comedy</div>
+
+    <h1 class="long-title">
+      『3행시들(신곡)』<br>
+      <span class="sub-long">
+        <i>Le Terze rime</i><br>
+        <i>Divine Comedy</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1502년 8월<br>
+      단테 알리기에리 Dante Alighieri<span class="note-inline">1265–1321?</span> 저술<br>
+      이탈리아 베네치아, 알도 인쇄소에서 극도로 정밀하게 인쇄<br>
+      <i>Venetijs, in aedib. Aldi accuratissime</i><br>
+      17.0×10.8cm ｜ 로마 국립중앙도서관 소장, BNCR, RB 1813
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 알도의 인쇄소에서 8절판형으로 간행된 단테 알리기에리<span class="note-inline">1265–1321?</span>의 『신곡 <i>Commedia</i>』로 피에트로 벰보<span class="note-inline">Pietro Bembo, 1470–1547</span>가 편집하였다. 벰보는 야코모 델라 라나<span class="note-inline">Jacomo della Lana, 1278–1358</span>의 전통적인 주석(풀이글)을 제거하고, 철자와 문장 부호를 바로잡았으며, 제목도 새롭게 정하였다. 이러한 편집은 당시에 적지 않은 논란을 불러일으켰다. 벰보가 이 책을 편집할 때 참고한 사본은 1351년 여름과 1353년 5월 사이에 조반니 보카치오<span class="note-inline">Giovanni Boccaccio, 1313–1375</span>가 페트라르카에게 기증한 사본(Ms. Vat. Lat. 3199)으로, 원래는 피에트로 벰보의 아버지 베르나르도 벰보<span class="note-inline">Bernardo Bembo, 1433–1519</span>의 서재에 보관되어 있던 것이다. 이 판본은 1481년 크리스토포로 란디노<span class="note-inline">Cristoforo Landino, 1424–1498</span>가 정립한 표준본<span class="note-inline">vulgata</span> 이후 또 하나의 새로운 기준이 되었으며, 1595년 아카데미아 델라 크루스카(Accademia della Crusca) 판이 나오기 전까지 모든 후속 판본의 기초가 되었다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+    <div class="notes">
+      <p>* 원제: <i>La Comedia</i> (희곡)</p>
+      <p>&nbsp;&nbsp;후대 제목: <i>La Divina Commedia</i> (신곡)</p>
+    </div>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+This is the first Aldine edition of Dante’s <i>Divine Comedy</i> in octavo format, edited by Pietro Bembo (1470–1547), who did not include the traditional commentary of Jacomo della Lana, revised the spelling and punctuation, not without controversy, and also chose the new title. Bembo prepared the edition from a manuscript given to Francis Petrarch by Giovanni Boccaccio between the summer of 1351 and May 1353 (Ms. Vat. Lat. 3199), which was preserved in the library of his father Bernardo Bembo. Thus he established a new <i>vulgate</i> after the one produced by Cristoforo Landino in 1481, which served as a reference for all subsequent editions until the 1595 edition of the Accademia della Crusca.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Si tratta della prima edizione aldina della <i>Commedia</i> dantesca in formato in-8°, curata da Pietro Bembo (1470–1547) che la privò del tradizionale commento di Jacomo della Lana, apportò modifiche all’ortografia e alla punteggiatura, suscitando non poche polemiche, e scelse anche il nuovo titolo. Bembo approntò l’edizione usando un manoscritto donato da Giovanni Boccaccio a Francesco Petrarca fra l’estate del 1351 e il maggio del 1353 (Ms. Vat. Lat. 3199), che era conservato nella biblioteca di suo padre Bernardo Bembo. Arrivò così a fissare una nuova <i>vulgata</i> dopo quella stabilita da Cristoforo Landino nel 1481, che servì da riferimento per tutte le successive edizioni fino a quella della Crusca del 1595.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
