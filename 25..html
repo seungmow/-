@@ -3,53 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『갈리아 전쟁기: 8권에 대한 주석서 포함』 | 알도 마누치오</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-navy: #2D3E63;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-navy);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-navy);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-navy);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #000;
+      margin-top: 6px;
+    }
+
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-navy); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-navy);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .note-inline {
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.15em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">25</span>
+    <h1 class="main-title">알도 마누치오의 인쇄소에서 처음으로 삽화를 담아 출판한 휴대용 책</h1>
+    <div class="subtitle-en">The first illustrated book published by the Aldine press</div>
+
+    <h1 class="long-title">
+      『갈리아 전쟁기: 8권에 대한 주석서 포함』<br>
+      <span class="sub-long"><i>Hoc volumine continentur haec. Commentariorum de bello Gallico libri VIII…</i><br><i>Commentaries on the Gallic War</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1513년 4월<br>
+      가이우스 율리우스 카이사르 <span class="note-inline">Gaius Iulius Caesar</span> 저술<br>
+      이탈리아 베네치아, 알도와 그의 장인 안드레아의 인쇄소에서 인쇄<br>
+      Venetijs, in aedibus Aldi, et Andreae soceri<br>
+      16.8×11.5cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.6.B.17
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+『갈리아 전쟁기』는 고대 로마 장군 율리우스 카이사르<span class="note-inline">기원전 100–44</span>가 갈리아 지역에서 펼친 8년 동안의 전투 상황을 담은 책이다. 
+이 책은 알디네 판본 가운데 최초로 삽화가 포함된 휴대용 판본으로, 갈리아의 여러 지역을 구분해 채색한 지도가 실려 있다. 
+이러한 도상학적 선택은 본문(A3v–A5r장)에서 학자들에게 보내는 편지를 통해 편집자가 직접 설명하고 있다. 
+또한 지도 외에도 다섯 점의 목판화가 포함되어 있는데, 그 중 마실리아<span class="note-inline">Massilia</span>와 욱셀로두눔<span class="note-inline">Uxellodunum</span>의 도시 전경은 본문과 반대로 잘못 배치되어 인쇄되었다. 
+이에 대해 알도가 직접 잉크로 수정한 흔적(C1r장과 C1v장)이 남아 있기도 하다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+First illustrated pocket edition with a map of Gaul with regions highlighted in different colours and the publisher’s letter to scholars on leaves A3v–A5r regarding the iconographic choices made. 
+In addition to this there are a further five woodblock prints, including views of the cities of <i>Massilia</i> and <i>Uxellodunum</i>, in the wrong position compared to the text and therefore bearing a handwritten ink correction made by Manuzio himself (leaves C1r and C1v).
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Primo tascabile illustrato, corredato da una carta della Gallia colorata in modo da distinguerne le diverse regioni, con le scelte iconografiche spiegate dall’editore nella lettera agli studiosi alle carte A3v–A5r. 
+Ad essa si aggiungono cinque ulteriori xilografie, tra le quali si trovano le vedute delle città di <i>Massilia</i> e <i>Uxellodunum</i>, invertite per errore rispetto al testo e pertanto recanti una correzione a inchiostro di mano dello stesso Aldo (carte C1r e C1v).
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
