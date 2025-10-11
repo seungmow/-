@@ -3,53 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『풍요의 뿔, 혹은 라틴어 주석서』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-navy: #2D3E63;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-navy);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-navy);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-navy);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+      font-style: normal;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-navy); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-navy);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+
+    .note-inline {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.15em;
+      position: relative;
+      top: -0.4em;
+    }
+
+    .notes {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 16px;
+      margin-left: 0;
+      padding-left: 0;
+      line-height: 1.55;
+    }
+    .notes p {
+      margin: 4px 0;
+      text-indent: -1.5em;
+      padding-left: 1.5em;
+    }
+
+    section { margin-bottom: 32px; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">29</span>
+    <h1 class="main-title">알도 마누치오가 쪽 번호를 처음 도입한 책(초판본)</h1>
+    <div class="subtitle-en">First edition of <i>Cornucopiae</i>, the book in which Aldo Manuzio first used page numbers</div>
+
+    <h1 class="long-title">
+      『풍요의 뿔, 혹은 라틴어 주석서』<br>
+      <span class="sub-long"><i>Cornucopiae, siue linguae latinae commentarii…</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1499년 7월<br>
+      니콜로 페로티<span class="note-inline">Niccolò Perotti</span> 저술<br>
+      이탈리아 베네치아, 알도 인쇄소에서 인쇄<br>
+      <i>Venetiis, in aedibus Aldii</i><br>
+      31.7×22.0cm ｜ 국립마르차나도서관 소장, BNM, ALDINE 150
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 마르케<span class="note-inline">Marche</span> 출신의 인문주의자 니콜로 페로티<span class="note-inline">Niccolò Perotti, 1429–1480</span>가 고대 로마 시인 마르티알리스<span class="note-inline">Martialis, 1세기경</span>의 에피그람(짧은 시)에 해설을 붙인 초판본이다. 알도 마누치오가 저자 사후에 출판하여 우르비노 공작 페데리코 다 몬테펠트로 3세<span class="note-inline">Federico III da Montefeltro, 1422–1482 </span>에게 헌정하였다. 페로티는 시구절을 분석하며 문법적·언어적 고찰과 역사적 해설을 덧붙였고, 그 결과 이 책은 라틴어의 핵심 어휘집이자 고대 세계를 아우르는 일종의 백과사전으로 평가된다. 이 판본에서 알도는 전통적인 폴리오folio* 단위 대신 근대적인 쪽 번호 매기기<span class="note-inline">page numbering</span> 방식을 처음으로 도입하였다. 전시된 책에는 서로 다른 두 사람이 남긴 여백 주석 <span class="note-inline">marginalia </span>가 확인된다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+
+    <div class="notes">
+      <p>* 폴리오(folio): 큰 종이를 여러 번 접어서 페이지를 만드는 방식으로, 폴리오를 여러 개 묶어서 하나의 콰이어(quire)를 구성한다. 콰이어는 제책 과정에서 체계적 제본을 하기 위한 실용적인 목적으로 만들곤 한다. 결과적으로 여러 개의 콰이어를 묶으면 책이 완성되는 것이다. 여기서 말하는 전통적인 폴리오 넘버링이란 콰이어 당 알파벳 글자(a, b, c 등)를 붙이고, 콰이어 내 폴리오 당 번호(i, ii, iii 등)를 붙여서 순서대로 ai aii aiii aiiii... bi bii biii biiii... 형식으로 번호를 매기는 방식을 말한다.</p>
+    </div>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+First edition of the commentary by humanist Niccolò Perotti (1429–1480) to the poet Martial’s epigrams, published after the author’s death and dedicated to Federico III da Montefeltro, duke of Urbino. Perotti analyses the poems in order to comment on the grammar and language, with digressions into history which made the work an essential Latin dictionary and a sort of encyclopaedia of the classical world. Manuzio adopted the modern system of numbering pages in this edition, instead of the traditional numbering of leaves. This copy from the Biblioteca Marciana contains <i>marginalia</i> from two different writers.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Prima edizione del commento agli epigrammi del poeta Marziale, dell’umanista marchigiano Niccolò Perotti (1429–1480), pubblicato postumo da Aldo e dedicato al Duca d’Urbino Federico III da Montefeltro. L’analisi dei versi fu il punto di partenza di Perotti per osservazioni di carattere grammaticale e linguistico e digressioni storiche che hanno reso l’opera un lessico fondamentale della lingua latina e una sorta di enciclopedia del mondo classico. In questa occasione per la prima volta Aldo ha adottato il moderno sistema di numerazione per pagina invece di quello tradizionale per carta. L’esemplare della Biblioteca Marciana presenta <i>marginalia</i> riferibili a due mani diverse.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
