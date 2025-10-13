@@ -3,53 +3,163 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『탄생일에 대하여』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-teal: #2E6E6C;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-teal);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.9rem;
+      color: var(--accent-teal);
+      margin: 0 0 6px; padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400; font-size: 1.05rem;
+      color: var(--accent-teal);
+      margin: 0 0 14px; padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.6rem;
+      margin: 10px 0; padding-left: 28px;
+      line-height: 1.45; color: var(--text);
+    }
+
+    .sub-long {
+      display: block; font-size: 1.15rem;
+      color: #333; margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic; font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555; font-size: 0.92rem;
+      margin: 12px 0; padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-teal); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px; font-size: 1.05rem;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 10px; color: var(--text);
+      font-weight: 700; font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc { margin-top: 0; font-size: 1rem; color: #222; word-break: keep-all; line-height: 1.65; }
+
+    .note-inline { font-size: 0.9rem; color: #666; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size:1.6rem; }
+      .subtitle-en { font-size:0.95rem; }
+      h1.long-title { font-size:1.3rem; }
+      h2 { font-size:1rem; }
+      .sub-long { font-size:1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">52</span>
+    <h1 class="main-title">알도 마누치오 2세가 바티칸 도서관장에게 헌정한 책</h1>
+    <div class="subtitle-en">A book dedicated by Aldo Manuzio the Younger to the Librarian of the Vatican Library</div>
+
+    <h1 class="long-title">
+      『탄생일에 대하여』<br>
+      <span class="sub-long">
+        <i>Censorini De die. natali liber ad. Q. Caerellium ab Aldo Mannuccio, Paulli F. Aldi n. emendatus, & notis illustratus.</i><br>
+        <i>De die natali, edited by Aldo Manuzio, son of Paolo, grandson of Aldo</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1581년<br>
+      켄소리누스 Censorinus 저술<br>
+      이탈리아 베네치아, 알도 인쇄소에서 인쇄 Venetiis, apud Aldum<br>
+      15.0×10.4cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.7.A.30
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+『탄생일에 대하여 <i>De die natali</i>』는 기원후 3세기 활약한 로마의 문법학자 켄소리누스가 그의 후원자인 귀족 퀸투스 케렐리우스<span class="note-inline">Quintus Cerellius</span>의 생일을 기념하여 쓴 책으로, 시간의 계산과 구분(밤, 낮, 천문 주기, 올림피아드 등)을 다루고 있다. 
+이 책은 알도 마누치오의 손자인 알도 마누치오 2세가 편집한 것으로, 바티칸 도서관장이었던 추기경 굴리엘모 시를레토<span class="note-inline">Guglielmo Sirleto, 1514–1585</span>에게 헌정되었다. 
+표제지에는 타원형 장식 틀 안에 알도 마누치오의 목판 초상화가 실려 있다. 
+1581년에 인쇄된 이 판본은 1517년과 1528년에 고대 로마 철학자 마크로비우스<span class="note-inline">Macrobius</span>의 저작과 함께 합쳐서 인쇄된 『탄생일에 대하여 <i>De die natali</i>』의 뒤를 잇는 것이다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Scientific treatise by Roman scholar and grammarian Censorinus (3rd c. CE), dedicated to his patron, the nobleman Quintus Caerellius, for his birthday. 
+The volume discusses the measurement and division of time – night, day, astronomical cycles, Olympiads, and more. 
+This edition was edited by Aldo Manuzio the Younger and dedicated to Cardinal Guglielmo Sirleto, librarian of the Vatican Apostolic Library. 
+The frontispiece features a woodcut portrait of Aldo Manuzio the Elder within an oval frame. 
+Printed in 1581, this edition follows two earlier versions of <i>De die natali</i> printed by Manuzio’s heirs in 1517 and 1528 alongside works by Macrobius.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Trattato scientifico composto dal grammatico ed erudito romano Censorino (sec. III d.C.) in occasione del compleanno del nobile Quinto Cerellio, suo patrono. 
+L’opera tratta del calcolo del tempo e delle sue diverse suddivisioni (notte, giorno, cicli astronomici, Olimpiadi, ecc.). 
+Questa edizione, curata da Aldo il giovane e dedicata al cardinale Guglielmo Sirleto, bibliotecario della Biblioteca Apostolica Vaticana, si apre con un ritratto xilografico di Aldo il vecchio sul frontespizio racchiuso in una cornice ovale. 
+Essa segue altre due edizioni del <i>De die natali</i> pubblicate dagli eredi di Aldo nel 1517 e nel 1528 insieme a opere di Macrobius.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
