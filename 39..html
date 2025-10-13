@@ -3,53 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『일리아스, 오뒷세이아, 개구리와 쥐의 전투』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-teal: #2E6E6C;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+    .label-number {
+      background: var(--accent-teal);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-teal);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-teal);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+    }
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+    .divider { border-bottom: 2px solid var(--accent-teal); margin: 20px 0 12px; }
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+    .note-inline {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.25em;
+    }
+    section { margin-bottom: 32px; }
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">39</span>
+    <h1 class="main-title">알도 마누치오의 후손들이 인쇄한 호메로스의 주요 작품집</h1>
+    <div class="subtitle-en"><i>The Iliad, Odyssey, and Batrachomyomachia</i>: a collection of Homer’s main works printed by the heirs of Aldo Manuzio</div>
+
+    <h1 class="long-title">
+      『일리아스, 오뒷세이아, 개구리와 쥐의 전투』<br>
+      <span class="sub-long"><i>Omerou Ilias. Homeri Ilias. Odysseia. Batrachomyomachia</i><br><i>Homer’s Iliad, Odyssey, and Batrachomyomachia</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1524년 4월<br>
+      호메로스 Homerus 저술<br>
+      이탈리아 베네치아, 알도와 그의 장인 안드레아 토레사노의 인쇄소에서 인쇄<br>
+      Venetijs, in aedibus Aldi, et Andreae Asulani soceri<br>
+      17.2×11.6cm ｜ 로마 국립중앙도서관 소장, BNCR, 68.7.B.31
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 알도 마누치오의 후손들이 1524년에 간행한 고대 그리스 시인 호메로스의 작품 전집이다. 『일리아스 <i>Iliade</i>』, 『오뒷세이아 <i>Odissea</i>』, 『개구리와 쥐의 전투 <i>Batracomiomachia</i>』, 『호메로스 찬가 <i>Inni</i>』가 두 권으로 나뉘어 수록되어 있다. 첫 번째 권의 앞부분에는 고대 그리스의 역사가 헤로도토스<span class="note-inline">기원전 484–425</span>와 철학자 플루타르코스<span class="note-inline">기원후 46–120</span>가 호메로스 생애에 관하여 작성한 글이 실려 있다. 한편 알도 마누치오는 1504년 10월에 이미 호메로스 전집을 출판한 바 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Complete edition of the works of Homer (<i>Iliad</i>, <i>Odyssey</i>, <i>Batrachomyomachia</i>, <i>Hymns</i>) published by Aldo Manuzio’s heirs in 1524 and presented in two volumes. The initial pages of the first contain the life of Homer written by Herodotus and Plutarch. Aldo had already published the entire <i>corpus</i> in October 1504.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Edizione completa delle opere di Omero (<i>Iliade</i>, <i>Odissea</i>, <i>Batracomiomachia </i>, <i>Inni</i> ) pubblicata dagli eredi di Aldo nel 1524 e suddivisa in due volumi. Nel primo, le carte iniziali contengono le vite di Omero scritte da Erodoto e da Plutarco. Aldo aveva già pubblicato l’intero <i>corpus</i> nell’ottobre del 1504.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
