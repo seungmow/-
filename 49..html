@@ -3,53 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『제목 미상 판화』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-teal: #2E6E6C;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-teal);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.9rem;
+      color: var(--accent-teal);
+      margin: 0 0 6px; padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400; font-size: 1.05rem;
+      color: var(--accent-teal);
+      margin: 0 0 14px; padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.6rem;
+      margin: 10px 0; padding-left: 28px;
+      line-height: 1.45; color: var(--text);
+    }
+
+    .sub-long {
+      display: block; font-size: 1.15rem;
+      color: #333; margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic; font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555; font-size: 0.92rem;
+      margin: 12px 0; padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-teal); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px; font-size: 1.05rem;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 10px; color: var(--text);
+      font-weight: 700; font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc { margin-top: 0; font-size: 1rem; color: #222; word-break: keep-all; line-height: 1.65; }
+
+    .note-inline { font-size: 0.9rem; color: #666; }
+
+    .notes { font-size: 0.9rem; color: #555; margin-top: 16px; line-height: 1.55; }
+    .notes p { margin: 4px 0; text-indent: -1.5em; padding-left: 1.5em; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size:1.6rem; }
+      .subtitle-en { font-size:0.95rem; }
+      h1.long-title { font-size:1.3rem; }
+      h2 { font-size:1rem; }
+      .sub-long { font-size:1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">49</span>
+    <h1 class="main-title">로마 콜로세움의 단면을 원형에 가깝게 재현한 판화</h1>
+    <div class="subtitle-en">A print of a cross-section of the Colosseum depicted in near-original form</div>
+
+    <h1 class="long-title">
+      ‹제목 미상 판화 (콜로세움 단면도 추정)›<br>
+      <span class="sub-long">
+        <i>[Sezione del Colosseo]</i><br>
+        <i>[Cross section of the Colosseum]</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      16세기 추정<br>
+      작가 미상<br>
+      판화 acquaforte (에칭)<br>
+      41.2×55.0cm ｜ 로마 국립중앙도서관 소장, BNCR, 18.C.V.49.2
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 작품은 콜로세움을 이상적인 모습으로 재구성한 단면도 판화이다. 중앙에는 하나의 아치형 공간이, 양쪽에는 외부를 드러내는 두 개의 아치형 통로가 있다. 
+이 판화는 작자 미상으로, 출판인이나 제작 연대를 알 수 없고, 종이의 워터마크도 확인되지 않는다. 
+이번 전시의 ‹콜로세움 정면도›(도판 48)와 ‹콜로세움 단면도›(도판 49) 모두 아주 희귀한 콜로세움 판화와 비교할 수 있다. 
+그 판화는 앙투안 라프레리<span class="note-inline">Antoine Lafrery, 1512–1577</span>가 인쇄하고, 16세기 후반에 활동한 니콜라 베아트리제<span class="note-inline">Nicolas Beatrizet</span>의 작품으로 추정된다. 
+그 판화에서는 콜로세움의 왼쪽 측면을 개방해 내부 공간을 보여주고 있으며, 바닥을 원근법으로 표현했고, 그 크기도 두 판화와 모두 비슷하다. 
+이러한 이유로 이 판화는 16세기 말에서 17세기 초 사이에 널리 활용되기도 했다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+
+    <div class="notes">
+    ‹콜로세움 정면도›(48번)에 대해 실비아 데스와르트-로사(Sylvie Deswarte-Rosa)의 해석과는 달리, 파올로 아리고니(Paolo Arrigoni)와 아킬레 베르타렐리(Achille Bertarelli)는 1939년에 출간한 『로마와 라치오의 지도와 전경 <i>(Piante e vedute di Roma e del Lazio conservate nella raccolta delle stampe e dei disegni)</i>, 판화와 드로잉 소장본』에서 이 판화의 동판을 출판업자 클로드 뒤셰(Claude Duchet, ?–1585)의 작업으로 보고, 제작 시기를 약 1581년으로 추정하기도 했다.</p>
+    </div>
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+The engraving shows a cross section of an ideal reconstruction of the monument, with a central bay and two openings on the sides representing the exterior. 
+The plate is anonymous, with no mention of the publisher or the date, and the watermark is not visible. 
+Exhibits no. 48 and 49 are reminiscent of a very rare engraving of the Colosseum, printed by Antoine Lafrery and attributed to Nicolas Beatrizet (second half of the 16th century), which presents an opening on the left-hand side of the structure, with a view of the interior, a floor in perspective, and similar dimensions. 
+The Beatrizet work was widely reproduced in the late 16th to early 17th centuries. 
+Unlike Sylvie Deswarte-Rosa (op. cit., exhibit no. 48), Paolo Arrigoni and Achille Bertarelli claimed in <i>Piante e vedute di Roma e del Lazio conservate nella raccolta delle stampe e dei disegni</i> (1939) that the copperplate was attributed to the publisher Claude Duchet, dated circa 1581.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+L’incisione raffigura il monumento in sezione secondo una ricostruzione ideale, con una campata centrale e due aperture ai lati che rappresentano la parte esterna. 
+La tavola è anonima, priva di indicazione dell’editore e della data; la filigrana non è visibile. 
+Gli esemplari n. 48 e 49 esposti in questa mostra possono essere avvicinati a un’incisione molto rara del Colosseo, stampata dal tipografo Antoine Lafrery e attribuita a Nicolas Beatrizet (seconda metà del XVI secolo), che mostrava un’apertura sul lato sinistro della struttura, con una vista verso l’interno del monumento, pavimentazione in prospettiva e dimensioni simili, che fu ampiamente ripresa tra la fine del XVI e l’inizio del XVII secolo. 
+Diversamente dall’interpretazione offerta da Sylvie Deswarte-Rosa (op. cit. al n. 48 in mostra), nella pubblicazione di Paolo Arrigoni e Achille Bertarelli, <i>Piante e vedute di Roma e del Lazio conservate nella raccolta delle stampe e dei disegni</i> (1939), il rame della rappresentazione fu attribuito all’editore Claude Duchet con datazione circa 1581.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
