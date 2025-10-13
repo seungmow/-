@@ -3,53 +3,163 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『세계의 도시들』 제6권</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-teal: #2E6E6C;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+    .label-number {
+      background: var(--accent-teal);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--accent-teal);
+      margin: 0 0 6px;
+      padding-left: 48px;
+      line-height: 1.35;
+    }
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--accent-teal);
+      margin: 0 0 14px;
+      padding-left: 48px;
+      line-height: 1.3;
+    }
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin: 10px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .sub-long {
+      display: block;
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555;
+      font-size: 0.92rem;
+      margin: 12px 0;
+      padding-left: 28px;
+      line-height: 1.45;
+    }
+    .divider { border-bottom: 2px solid var(--accent-teal); margin: 20px 0 12px; }
+    h2 {
+      margin: 18px 0 20px;
+      font-size: 1.05rem;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-family: 'Noto Serif KR', sans-serif;
+    }
+    .desc {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #222;
+      word-break: keep-all;
+      line-height: 1.65;
+    }
+    .note-inline {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.85em;
+      color: #777;
+      margin-left: 0.25em;
+    }
+    section { margin-bottom: 32px; }
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size: 1.6rem; }
+      .subtitle-en { font-size: 0.95rem; }
+      h1.long-title { font-size: 1.3rem; }
+      h2 { font-size: 1rem; }
+      section { margin-bottom: 24px; }
+      .sub-long { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">42</span>
+    <h1 class="main-title">베네치아의 산마르코 광장 전경도가 수록된 세계 도시 지도</h1>
+    <div class="subtitle-en">An atlas of world cities including a view of Piazza San Marco in Venice</div>
+
+    <h1 class="long-title">
+      『세계의 도시들』 제6권<br>
+      <span class="sub-long"><i>Theatri praecipuarum totius mundi vrbium liber sextus</i><br><i>Braun & Hogenberg: Cities of World, Book 6</i></span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      1618년 추정<br>
+      게오르크 브라운 Georg Braun 저술<br>
+      44.0×29.2cm ｜ 국립마르차나도서관 소장, BNM, 211 C 9
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 책은 독일의 성직자이자 인문학자인 게오르크 브라운<span class="note-inline">1541–1622</span>의 『세계의 도시들』 중 제6권으로, 전시된 면은 베네치아 산마르코 광장의 전경이 보이는 지도이다. 지도에 보이는 산마르코 광장의 모든 요소들이 오늘날의 모습과 거의 일치한다는 점이 주목할 만하다. 그 모습은 산 마르코 대성당과 그 전면에 자리한 비잔틴 양식의 청동 말 조각상, 종탑, 광장의 양쪽에 길게 위치한 옛 관청 건물과 1640년에 완공 예정인 새로운 관청 건물, 시계탑, 두칼레 궁전, 국립마르차나도서관, 그리고 도시의 상징인 성 테오도로<span class="note-inline">San Teodoro</span>와 산마르코의 사자상을 조각한 두 기둥 등이 묘사되어 있다. 그림 왼쪽에는 대성당을 배경으로 한 광장이, 오른쪽에는 1577년에 일어난 두칼레 궁전 화재 장면이 그려져 있고, 광장의 다른 쪽에는 마르차나도서관이 정밀하게 표현되어 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Sixth volume of Braun’s atlas. Here, we see the wonderful view of Saint Mark’s Square in Venice. The layout of the square is already how we currently see it today with all its distinctive features: the basilica with the Triumphal Quadriga of Byzantine horses; the bell tower; the Procuratie Vecchie and Nuove (though only completed in 1640); the clock tower; the Doge’s Palace; the Biblioteca Marciana; the two columns with the city’s symbols: Saint Theodore and the Lion of Saint Mark. The image on the left is of the square with the basilica in the background. On the right we see the terrible fire at the Doge’s Palace which took place in 1577, and the Biblioteca Nazionale Marciana on the other side of the square.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Sesto volume dell’Atlante del Braun, del quale si espone la magnifica veduta di Piazza San Marco a Venezia. Come si può notare, la configurazione della Piazza corrisponde già a quella attuale con tutti i suoi elementi: la Basilica con la quadriga dei cavalli bizantini, la Torre campanaria, le Procuratie vecchie e le nuove (completate però solo nel 1640), la Torre dell’Orologio, il Palazzo Ducale, la Biblioteca Marciana, le due colonne con i simboli della città: San Teodoro e il Leone marciano. Nell’immagine di sinistra, la Piazza ha sullo sfondo la Basilica; sulla destra è raffigurato il terribile incendio del Palazzo Ducale avvenuto nel 1577, mentre dall’altra parte della Piazza è ben visibile la Biblioteca Marciana.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
