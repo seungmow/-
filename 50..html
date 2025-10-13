@@ -3,53 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>지리학 | 프란체스코 베를링기에리</title>
+  <title>『제목 미상 판화』</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      line-height: 1.65;
-      font-size: 18px;
+    :root {
+      --accent-teal: #2E6E6C;
+      --ivory: #FDF6EC;
+      --muted-gray: #777;
+      --text: #222;
     }
-    header { margin-bottom: 28px; }
-    h1 { font-size: 1.8rem; margin: 10px 0; }
-    .meta { color: #555; font-size: 0.95rem; margin-bottom: 18px; }
-    h2 { margin-top: 24px; font-size: 1.2rem; }
-    .desc { white-space: pre-wrap; }
-    footer { margin-top: 40px; font-size: 0.9rem; color: #777; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 17px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header { margin-bottom: 18px; position: relative; min-height: 62px; }
+
+    .label-number {
+      background: var(--accent-teal);
+      color: var(--ivory);
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700;
+      position: absolute; left: 0; top: 0;
+    }
+
+    h1.main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.9rem;
+      color: var(--accent-teal);
+      margin: 0 0 6px; padding-left: 48px;
+      line-height: 1.35;
+    }
+
+    .subtitle-en {
+      font-family: 'Merriweather', serif;
+      font-weight: 400; font-size: 1.05rem;
+      color: var(--accent-teal);
+      margin: 0 0 14px; padding-left: 48px;
+      line-height: 1.3;
+    }
+
+    h1.long-title {
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 700; font-size: 1.6rem;
+      margin: 10px 0; padding-left: 28px;
+      line-height: 1.45; color: var(--text);
+    }
+
+    .sub-long {
+      display: block; font-size: 1.15rem;
+      color: #333; margin-top: 6px;
+    }
+    .sub-long i {
+      font-family: 'Merriweather', serif;
+      font-style: italic; font-weight: 600;
+    }
+
+    .meta {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #555; font-size: 0.92rem;
+      margin: 12px 0; padding-left: 28px;
+      line-height: 1.45;
+    }
+
+    .divider { border-bottom: 2px solid var(--accent-teal); margin: 20px 0 12px; }
+
+    h2 {
+      margin: 18px 0 20px; font-size: 1.05rem;
+      border-left: 4px solid var(--accent-teal);
+      padding-left: 10px; color: var(--text);
+      font-weight: 700; font-family: 'Noto Serif KR', sans-serif;
+    }
+
+    .desc { margin-top: 0; font-size: 1rem; color: #222; word-break: keep-all; line-height: 1.65; }
+
+    .note-inline { font-size: 0.9rem; color: #666; }
+
+    footer { margin-top: 26px; font-size: 0.82rem; color: #777; text-align: center; }
+
+    @media (max-width: 480px) {
+      body { font-size: 16px; padding: 18px 12px; }
+      .label-number { width:34px;height:34px;font-size:0.95rem; }
+      h1.main-title { font-size:1.6rem; }
+      .subtitle-en { font-size:0.95rem; }
+      h1.long-title { font-size:1.3rem; }
+      h2 { font-size:1rem; }
+      .sub-long { font-size:1.05rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="museum">MUSEUM NAME / EXHIBITION TITLE</div>
-    <h1>『지리학』 Geographia</h1>
+    <span class="label-number">50</span>
+    <h1 class="main-title">1625년 희년을 기념해 제작한 바티칸 전경 판화</h1>
+    <div class="subtitle-en">A print of a view of the Vatican produced to commemorate the Jubilee of 1625</div>
+
+    <h1 class="long-title">
+      ‹제목 미상(열 개의 대성당 연작: 성 베드로 대성당 추정)›<br>
+      <span class="sub-long">
+        <i>[Le dieci Basiliche]. San Pietro. Ioannes Maggius Romanus delineavit</i><br>
+        <i>[The Ten Basilicas]. Saint Peter’s drawn by Giovanni Maggi of Rome</i>
+      </span>
+    </h1>
+
     <div class="meta">
-      프란체스코 베를링기에리 (Francesco Berlinghieri) · 1482년 9월 10일 이전, 이탈리아 피렌체<br>
-      니콜로 토데스코 인쇄 · 로마국립중앙도서관 소장 (BNCR, 70.1.G.5)
+      17세기 초 추정<br>
+      조반니 마지 Giovanni Maggi (소묘작가, 1566–1630)<br>
+      마타이스 그로이터 Matthaus Greuter (판화가, 1555/1556–1638)<br>
+      판화 acquaforte (에칭)<br>
+      이탈리아 로마, 폴 마우팽이 인쇄 [Roma], Paul Maupin<br>
+      41.0×56.0cm ｜ 로마 국립중앙도서관 소장, BNCR, 18.C.III.36.2
     </div>
   </header>
+
+  <div class="divider"></div>
 
   <section id="kr">
     <h2>작품 설명 (국문)</h2>
     <p class="desc">
-고대 지리학자 프톨레마이오스의 『지리학』을 이탈리아어로 다시 쓰고 이탈리아 지도를 추가한 지리서이다. 『지리학』은 프톨레마이오스(2세기경)의 저작 『지리안내서(Geographike Hyphegesis)』를 3운구(terza rima) 형식으로 개작한 작품으로, 고대와 중세 저자들의 인용이 포함되어 있다. 
-
-이 책은 독일 울름에서 발행된 초판본과 같은 시기의 것으로, 동판화로 제작된 지도 31점이 수록되어 있으며 스페인, 프랑스, 이탈리아, 팔레스타인에 대한 새로운 지도 4점이 추가되어 중요한 의의를 지닌다. 삽화 대부분은 작자를 알 수 없으나, 일부는 피렌체의 인쇄업자이자 화가였던 프란체스코 로셀리(1445–1513년경)의 작품으로 추정된다. 
-
-전시된 책은 동시대 화가에 의해 정교하게 채색되었으며, 전시된 면은 유럽 제6지도로 이탈리아를 묘사하고 있다.
+이 작품은 바티칸의 전경을 담은 판화로, 성 베드로 광장의 오벨리스크, 카를로 마데르노<span class="note-inline">Carlo Maderno, 1556–1629</span>가 설계를 완성한 성 베드로 대성당, 교황궁이 묘사되어 있다. 
+상단에는 제목이, 그림 안에는 도안을 그린 화가의 이름이 적혀 있으며, 하단에는 성 베드로 대성당의 설립과 그 안에 보관된 성유물에 대한 간단한 라틴어 설명이 적혀 있다. 
+또한, 그림 가장자리에는 대성당 내부 제단을 묘사한 아홉 개의 작은 삽화가 배치되어 있다. 
+이는 성당 내부에 봉헌된 예술 작품과 성물을 보여주며, 중앙의 성 베드로 광장을 둘러싸듯 배치되어 있다. 
+이 판화는 로마의 대성당과 대희년<span class="note-inline">Jubileo</span>에 죄를 용서(면죄)받기 위해 순례해야 했던 특별 제단들을 묘사한 10점의 연작 중 하나로, 1625년 희년을 앞두고 제작된 것으로 보인다. 
+한편, 판화가와 인쇄업자의 이름은 로마의 주교좌 성당인 산 조반니 라테라노 대성당<span class="note-inline">San Giovanni Laterano</span>을 묘사한 첫 번째 판화 작품에 나타나 있다. 
+그 판화에는 페르디난도 1세 데 메디치<span class="note-inline">Ferdinando I de’ Medici, 1549–1609</span>와 크리스티나 디 로레나<span class="note-inline">Cristina di Lorena, 1565–1637</span>의 문장이 들어 있고, 
+“존귀하신 토스카나 대공비 크리스티나 디 로레나께” 출판사가 작품을 바친다는 헌정 문구도 담겨 있다.
     </p>
-    <p class="desc" style="font-size:0.9rem; color:#555;">
-* ‘테르차 리마(terza rima)’는 각 시구의 마지막 두 음절이 일정한 규칙(aba bcb cdc...)에 따라 반복되도록 배치하는 각운 기법이다.
+  </section>
+
+  <section id="en">
+    <h2>Description (English)</h2>
+    <p class="desc">
+Partial view of the Vatican with the obelisk, St Peter’s Basilica as designed by Carlo Maderno, and the Apostolic Palace. 
+Title at the top, draughtsman’s name indicated within the image. 
+At the bottom: a short Latin description of the founding of the church and the relics it holds. 
+On three sides: nine smaller panels showing the altars inside the basilica, illustrating the sacred art and relics surrounding St Peter’s Square. 
+This plate is part of a series of ten engravings of Roman basilicas with their altars to be visited for indulgences, probably produced for the 1625 Jubilee. 
+The names of the engraver and the printmaker appear in the first plate depicting the Roman archbasilica and cathedral of <i>Saint John Lateran</i>, which includes a cartouche with the coat of arms of Ferdinando I de’ Medici and Christina of Lorraine, and the dedication “A Madama Serenissima Cristiana di Lorena Gran Duchessa di Toscana” (To Her Most Serene Highness Christina of Lorraine, Grand Duchess of Tuscany) to whom the publisher dedicated the work.
+    </p>
+  </section>
+
+  <section id="it">
+    <h2>Descrizione (Italiano)</h2>
+    <p class="desc">
+Veduta parziale del Vaticano con l’omonimo obelisco, la basilica di S. Pietro secondo il progetto realizzato da Carlo Maderno, e il palazzo apostolico. 
+Titolo in alto, indicazione del nome del disegnatore all’interno della rappresentazione. 
+In basso: breve descrizione in latino della fondazione della chiesa e delle reliquie custodite. 
+Sui tre lati: nove riquadri minori raffiguranti altari della basilica. 
+La tavola fa parte di una serie di dieci incisioni riproducenti le basiliche romane con gli altari privilegiati da visitare per le indulgenze, probabilmente realizzata in vista del Giubileo del 1625. 
+L’indicazione dell’incisore e del tipografo si trova nella prima tavola raffigurante <i>San Giovanni Laterano</i>, arcibasilica e cattedrale di Roma, che presenta in un cartiglio lo stemma gentilizio di Ferdinando I de’ Medici e Cristina di Lorena, con la dedica «A Madama Serenissima Cristiana di Lorena Gran Duchessa di Toscana» alla quale l’editore offre l’opera.
     </p>
   </section>
 
   <footer>
-    © 우리 박물관~. 본 설명글의 저작권은 국립세계문자박물관에 있으며, 
-  인용 시 반드시 출처를 밝혀야 합니다.
-</footer>
-
+    © 2025 National Museum of World Writing Systems
   </footer>
 </body>
 </html>
