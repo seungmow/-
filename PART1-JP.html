@@ -1,30 +1,28 @@
 <!doctype html>
-<html lang="zh">
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>第2部。阿尔多·马努齐奥：引领印刷革新 | 阿尔多·马努齐奥特展</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <title>第1部．ルネサンスの波に乗る | アルド・マヌーツィオ特別展</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent-brown: #6B3F2A;
-      --muted-gray: #777;
       --text: #222;
       --bg: #fff;
     }
 
     body {
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       max-width: 720px;
       margin: 0 auto;
       padding: 0 16px 40px;
       color: var(--text);
       background: var(--bg);
       font-size: 17px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
-    /* 상단 반원 */
     .curve-wrap {
       width: 100%;
       max-width: 720px;
@@ -51,7 +49,7 @@
     }
 
     h1 {
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 700;
       font-size: 1.7rem;
       color: var(--accent-brown);
@@ -62,8 +60,21 @@
 
     p {
       margin: 0 0 18px;
-      word-break: break-all; /* ✅ 중국어 줄바꿈 자연스럽게 */
+      word-break: keep-all;
       white-space: normal;
+    }
+
+    .notes {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 16px;
+      line-height: 1.55;
+    }
+
+    .notes p {
+      margin: 4px 0;
+      text-indent: -1.5em;
+      padding-left: 1.5em;
     }
 
     footer {
@@ -83,20 +94,23 @@
 </head>
 <body>
   <div class="curve-wrap">
-    <!-- 🎨 패널의 실제 반원 크기 -->
     <svg viewBox="0 0 720 360" preserveAspectRatio="xMidYMid meet">
-      <path d="M0,360 A360,360 0 0 1 720,360" fill="none" stroke="#6B3F2A" stroke-width="1.2"/>
+      <path d="M0,360 A360,360 0 0 1 720,360" fill="none" stroke="#6B3F2A" stroke-width="3"/>
     </svg>
-    <div class="part-title">第2部</div>
+    <div class="part-title">第1部</div>
   </div>
 
-  <h1>阿尔多·马努齐奥：引领印刷革新</h1>
+  <h1>ルネサンスの波に乗る</h1>
 
   <main>
     <p>
-      阿尔多•马努齐奥于威尼斯创立“阿尔丁印刷厂”，开创了出版业的革新之路。当时的威尼斯资本雄厚，是欧洲重要的海上贸易中心。阿尔多不仅创制出既便于阅读又节省纸张的斜体字，并积极推广分号（Semicolon）与单引号（Apostrophe）等标点符号，显著提升了文本的可读性。同时，他率先采用可单手持握的八开本(Octavo)图书，使得人人皆可轻松携带，促进了近乎现代的个人阅读文化的诞生。此外，得益于学者们对希腊与拉丁语古典文献的精心校勘，他坚持以原文印制，终使许多濒临散佚的典籍存续流传。阿尔多集学者之博识、编辑之敏感和事业家之远见于一身，在威尼斯纷繁激荡的出版市场中稳健立足，其出版物广为流传，影响深远。
+      ルネサンスは神の意志や宗教が支えた時代から人間が新しいテーマになった転換期でありました。人々は世界において探求を続け、芸術と科学を発展させましたし、人文主義者たちは“原泉に立ち返れ(ad fontes)”を唱えながら古代ギリシャ·ローマの文献を研修しました。その節、イタリアのバッシアーノ出身のアルド·マヌーツィオは人文学者で教育者でありながら平坦な人生を生きていました。四十を過ぎて、彼は安定した暮らしから離れて出版業に乗り出して新しい道を歩んでいきました。
     </p>
   </main>
+
+  <div class="notes">
+    <p>*アルド·マヌーツィオ (Aldo Manuzio) はアルドゥス·マヌーティウス (Aldus Manutius) というラテン語名としても知られていますが、この展示ではイタリア語名のアルド·マヌーツィオで表記します。</p>
+  </div>
 
   <footer>© 2025 National Museum of World Writing Systems</footer>
 </body>
