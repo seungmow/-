@@ -16,62 +16,39 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Noto Sans KR', sans-serif;
-      overflow-x: hidden;
-      touch-action: pan-x pinch-zoom;
+      overflow-x: hidden; /* ✅ 가로 스크롤 차단 */
+      overflow-y: auto;  /* ✅ 세로 스크롤 허용 */
+      -webkit-overflow-scrolling: touch;
     }
 
-    /* 슬라이더 */
+    header {
+      text-align: center;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      background: #f4f4f4;
+      color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* 세로 리스트 형태 */
     .slider {
       display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-      height: 100vh;
-      overflow-x: scroll;   /* ✅ 스크롤바 표시 */
-      overflow-y: hidden;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-color: #aaa #f8f8f8;  /* ✅ 스크롤 색상 (Firefox) */
-      scrollbar-width: thin;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 24px;
     }
 
-    /* ✅ 웹킷(크롬/모바일) 스크롤바 커스터마이즈 */
-    .slider::-webkit-scrollbar {
-      height: 8px;  /* 스크롤바 높이 */
-    }
-    .slider::-webkit-scrollbar-track {
-      background: #f8f8f8;
-    }
-    .slider::-webkit-scrollbar-thumb {
-      background-color: #999;
-      border-radius: 4px;
-    }
-
-    /* 이미지 */
     .slider img {
-      flex: 0 0 100%;
-      width: 100%;
+      width: 95%;
+      max-width: 720px;
       height: auto;
-      scroll-snap-align: start;
-      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       background: #fff;
-      border: none;
-      user-select: none;
-      touch-action: pan-x pinch-zoom;
-    }
-
-    /* 페이지 표시기 */
-    .page-indicator {
-      position: fixed;
-      bottom: 14px;
-      right: 18px;
-      background: rgba(0, 0, 0, 0.55);
-      color: #fff;
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border-radius: 10px;
-      font-family: 'Merriweather', serif;
-      z-index: 10;
     }
 
     footer {
@@ -84,6 +61,8 @@
 </head>
 
 <body>
+  <header>전시 리플릿 이미지 보기</header>
+
   <div class="slider" id="slider">
     <img src="./Leaflet/Leaflet_page_01.jpg" alt="Leaflet Page 1">
     <img src="./Leaflet/Leaflet_page_02.jpg" alt="Leaflet Page 2">
@@ -98,21 +77,6 @@
     <img src="./Leaflet/Leaflet_page_11.jpg" alt="Leaflet Page 11">
   </div>
 
-  <div class="page-indicator" id="indicator">1 / 11</div>
-
   <footer>© 2025 National Museum of World Writing Systems</footer>
-
-  <script>
-    const slider = document.getElementById('slider');
-    const indicator = document.getElementById('indicator');
-    const pages = slider.querySelectorAll('img').length;
-
-    slider.addEventListener('scroll', () => {
-      const pageWidth = slider.clientWidth;
-      const scrollLeft = slider.scrollLeft;
-      const current = Math.round(scrollLeft / pageWidth) + 1;
-      indicator.textContent = `${current} / ${pages}`;
-    });
-  </script>
 </body>
 </html>
