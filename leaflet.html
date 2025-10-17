@@ -19,14 +19,18 @@
       overflow-x: hidden;
     }
 
+    /* 전체 슬라이더 영역 */
     .slider {
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      width: 100%;
+      height: 100vh;
     }
 
+    /* 이미지 스타일 */
     .slider img {
       flex: 0 0 100%;
       width: 100%;
@@ -35,8 +39,10 @@
       object-fit: contain;
       background: #fff;
       border: none;
+      touch-action: pinch-zoom;
     }
 
+    /* 페이지 표시기 */
     .page-indicator {
       position: fixed;
       bottom: 12px;
@@ -49,6 +55,7 @@
       font-family: 'Merriweather', serif;
     }
 
+    /* 푸터 */
     footer {
       margin: 40px 0 20px;
       text-align: center;
@@ -59,20 +66,22 @@
 </head>
 
 <body>
+  <!-- 슬라이더 -->
   <div class="slider" id="slider">
-    <img src="Leaflet/Leaflet_page_01.jpg" alt="Leaflet Page 1">
-    <img src="Leaflet/Leaflet_page_02.jpg" alt="Leaflet Page 2">
-    <img src="Leaflet/Leaflet_page_03.jpg" alt="Leaflet Page 3">
-    <img src="Leaflet/Leaflet_page_04.jpg" alt="Leaflet Page 4">
-    <img src="Leaflet/Leaflet_page_05.jpg" alt="Leaflet Page 5">
-    <img src="Leaflet/Leaflet_page_06.jpg" alt="Leaflet Page 6">
-    <img src="Leaflet/Leaflet_page_07.jpg" alt="Leaflet Page 7">
-    <img src="Leaflet/Leaflet_page_08.jpg" alt="Leaflet Page 8">
-    <img src="Leaflet/Leaflet_page_09.jpg" alt="Leaflet Page 9">
-    <img src="Leaflet/Leaflet_page_10.jpg" alt="Leaflet Page 10">
-    <img src="Leaflet/Leaflet_page_11.jpg" alt="Leaflet Page 11">
+    <img src="./Leaflet/Leaflet_page_01.jpg" alt="Leaflet Page 1">
+    <img src="./Leaflet/Leaflet_page_02.jpg" alt="Leaflet Page 2">
+    <img src="./Leaflet/Leaflet_page_03.jpg" alt="Leaflet Page 3">
+    <img src="./Leaflet/Leaflet_page_04.jpg" alt="Leaflet Page 4">
+    <img src="./Leaflet/Leaflet_page_05.jpg" alt="Leaflet Page 5">
+    <img src="./Leaflet/Leaflet_page_06.jpg" alt="Leaflet Page 6">
+    <img src="./Leaflet/Leaflet_page_07.jpg" alt="Leaflet Page 7">
+    <img src="./Leaflet/Leaflet_page_08.jpg" alt="Leaflet Page 8">
+    <img src="./Leaflet/Leaflet_page_09.jpg" alt="Leaflet Page 9">
+    <img src="./Leaflet/Leaflet_page_10.jpg" alt="Leaflet Page 10">
+    <img src="./Leaflet/Leaflet_page_11.jpg" alt="Leaflet Page 11">
   </div>
 
+  <!-- 페이지 카운터 -->
   <div class="page-indicator" id="indicator">1 / 11</div>
 
   <footer>© 2025 National Museum of World Writing Systems</footer>
