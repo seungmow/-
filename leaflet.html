@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  <title>전시 리플릿 보기 | 국립세계문자박물관</title>
+  <style>
+    :root {
+      --bg: #f8f8f8;
+      --text: #222;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 16px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      height: calc(100vh - 80px);
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      object-fit: contain;
+      background: #fff;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .slider img:active {
+      transform: scale(1.2);
+      cursor: zoom-out;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 10px 0;
+    }
+
+    .page-indicator {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <header>전시 리플릿 이미지 보기</header>
+
+  <div class="slider" id="slider">
+    <img src="Leaflet_page_01.jpg" alt="Leaflet Page 1">
+    <img src="Leaflet_page_02.jpg" alt="Leaflet Page 2">
+    <img src="Leaflet_page_03.jpg" alt="Leaflet Page 3">
+    <img src="Leaflet_page_04.jpg" alt="Leaflet Page 4">
+    <img src="Leaflet_page_05.jpg" alt="Leaflet Page 5">
+    <img src="Leaflet_page_06.jpg" alt="Leaflet Page 6">
+    <img src="Leaflet_page_07.jpg" alt="Leaflet Page 7">
+    <img src="Leaflet_page_08.jpg" alt="Leaflet Page 8">
+    <img src="Leaflet_page_09.jpg" alt="Leaflet Page 9">
+    <img src="Leaflet_page_10.jpg" alt="Leaflet Page 10">
+    <img src="Leaflet_page_11.jpg" alt="Leaflet Page 11">
+  </div>
+
+  <div class="page-indicator" id="indicator">1 / 11</div>
+
+  <footer>© 2025 National Museum of World Writing Systems</footer>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const indicator = document.getElementById('indicator');
+    const pages = slider.querySelectorAll('img').length;
+
+    slider.addEventListener('scroll', () => {
+      const pageWidth = slider.clientWidth;
+      const scrollLeft = slider.scrollLeft;
+      const current = Math.round(scrollLeft / pageWidth) + 1;
+      indicator.textContent = `${current} / ${pages}`;
+    });
+  </script>
+</body>
+</html>
